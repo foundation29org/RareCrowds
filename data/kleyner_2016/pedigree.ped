@@ -1,6 +1,0 @@
-Fam1 proband Unaffected_father Unaffected_mother 1 2
-Fam1 Unaffected_father 0 0 1 1
-Fam1 Unaffected_mother 0 0 2 1
-Fam1 Unaffected_brother Unaffected_father Unaffected_mother 1 1
-Fam1 Unaffected_sister1 Unaffected_father Unaffected_mother 2 1
-Fam1 Unaffected_sister2 Unaffected_father Unaffected_mother 2 1
