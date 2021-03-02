@@ -22,7 +22,7 @@ class PhenotypicDatabase:
 
     def load_from_folder(self, folder_path: str):
         for file in os.listdir(folder_path):
-            self.add_phenopacket(self.load_from_file(folder_path + "/" + file))
+            self.add_phenopacket(self.load_from_file(os.path.join(folder_path, file)))
 
     def generate_list_of_dicts(self) -> List[Dict]:
         return_list = []
