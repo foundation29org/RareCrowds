@@ -6,6 +6,9 @@ from google.protobuf.json_format import Parse, MessageToJson
 import pandas as pd
 
 from rarecrowds.phenopackets_pb2 import Phenopacket
+from rarecrowds.utils.azure_utils import download_data
+
+DATA_PATH = "rarecrowds_data"
 
 
 class PhenotypicDatabase:
@@ -31,8 +34,14 @@ class PhenotypicDatabase:
         return return_list
 
     def generate_dataframe(self) -> pd.core.frame.DataFrame:
-        json_list = []
-        for k, v in self.db.items():
-            json_list.append(json.loads(MessageToJson(v)))
-        df = pd.json_normalize(json_list)
+        df = pd.json_normalize(self.generate_list_of_dicts())
         return df[self.fields]
+
+    def load_default(self, dataset: str, data_path: str = DATA_PATH):
+        if not os.path.exists(os.path.join(data_path, dataset)):
+            os.makedirs(os.path.join(data_path, dataset))
+        try:
+            download_data(dataset, data_path)
+            self.load_from_folder(os.path.join(data_path, dataset))
+        except Exception as e:
+            print(e)
