@@ -45,3 +45,8 @@ class PhenotypicDatabase:
             self.load_from_folder(os.path.join(data_path, dataset))
         except Exception as e:
             print(e)
+
+if __name__ == '__main__':
+    phen_db = PhenotypicDatabase()
+    phen_db.load_default("rao-2018")
+    print(phen_db.generate_dataframe().head)

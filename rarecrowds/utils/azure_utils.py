@@ -3,7 +3,16 @@ import os
 from azure.storage.blob import BlobServiceClient
 
 ACCOUNT_URL = "https://publiccasesv1.blob.core.windows.net"
-ALLOWED_CONTAINERS = set(["cipriani-2020", "ebiki-2019", "kleyner-2016", "rao-2018"])
+ALLOWED_CONTAINERS = set(
+    [
+        "cipriani-2020",
+        "ebiki-2019",
+        "kleyner-2016",
+        "rao-2018",
+        "tomar-2019",
+        "zomojtel-2014",
+    ]
+)
 
 
 def download_data(dataset: str, data_path: str) -> None:
@@ -24,6 +33,6 @@ def download_data(dataset: str, data_path: str) -> None:
             ) as blob_file:
                 download_stream = blob_client.download_blob()
                 blob_file.write(download_stream.readall())
-                print(f'Downloaded {blob["name"]}')
+        print(f"Downloaded {dataset}")
     except Exception as e:
         print(e)
