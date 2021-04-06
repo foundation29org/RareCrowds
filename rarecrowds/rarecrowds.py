@@ -66,9 +66,3 @@ class PhenotypicDatabase:
             for phenFeature in dictionary["phenotypicFeatures"]:
                 hpo_terms.append(phenFeature["type"]["id"])
             dictionary["hpo terms"] = hpo_terms
-
-
-if __name__ == "__main__":
-    phen_db = PhenotypicDatabase()
-    phen_db.load_from_file("test/resources/test_phenopacket.json")
-    print(phen_db.generate_dataframe().head)
