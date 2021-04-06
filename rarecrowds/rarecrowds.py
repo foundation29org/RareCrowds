@@ -27,8 +27,11 @@ class PhenotypicDatabase:
         self.db[phenopacket.id] = phenopacket
 
     def load_from_file(self, file_path: str) -> Phenopacket:
-        with open(file_path, "r") as jsfile:
-            return Parse(message=Phenopacket(), text=jsfile.read())
+        try:
+            with open(file_path, "r") as jsfile:
+                return Parse(message=Phenopacket(), text=jsfile.read())
+        except Exception as e:
+            print(e)
 
     def load_from_folder(self, folder_path: str) -> None:
         for file in os.listdir(folder_path):
@@ -63,9 +66,3 @@ class PhenotypicDatabase:
             for phenFeature in dictionary["phenotypicFeatures"]:
                 hpo_terms.append(phenFeature["type"]["id"])
             dictionary["hpo terms"] = hpo_terms
-
-
-if __name__ == "__main__":
-    phen_db = PhenotypicDatabase()
-    phen_db.load_default("ebiki-2019")
-    print(phen_db.generate_dataframe().head)
