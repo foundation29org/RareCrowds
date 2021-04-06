@@ -1,0 +1,9 @@
+language: python
+dist: xenial
+python: 
+    - "3.8.3"
+install:
+  - pip install -r requirements.txt
+script:
+    - pip install -e .
+    - pytest test/
