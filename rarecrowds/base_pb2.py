@@ -7,6 +7,7 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
+
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -16,118 +17,165 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
-  name='base.proto',
-  package='org.phenopackets.schema.v1.core',
-  syntax='proto3',
-  serialized_options=b'\n\037org.phenopackets.schema.v1.coreP\001',
-  create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nbase.proto\x12\x1forg.phenopackets.schema.v1.core\x1a\x1fgoogle/protobuf/timestamp.proto\"\xce\x02\n\x08MetaData\x12+\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\ncreated_by\x18\x02 \x01(\t\x12\x14\n\x0csubmitted_by\x18\x03 \x01(\t\x12<\n\tresources\x18\x04 \x03(\x0b\x32).org.phenopackets.schema.v1.core.Resource\x12\x38\n\x07updates\x18\x05 \x03(\x0b\x32\'.org.phenopackets.schema.v1.core.Update\x12\"\n\x1aphenopacket_schema_version\x18\x06 \x01(\t\x12O\n\x13\x65xternal_references\x18\x07 \x03(\x0b\x32\x32.org.phenopackets.schema.v1.core.ExternalReference\"\\\n\x06Update\x12-\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\nupdated_by\x18\x02 \x01(\t\x12\x0f\n\x07\x63omment\x18\x03 \x01(\t\"p\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\t\x12\x18\n\x10namespace_prefix\x18\x05 \x01(\t\x12\x12\n\niri_prefix\x18\x06 \x01(\t\"*\n\rOntologyClass\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\"\x93\x04\n\x11PhenotypicFeature\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12<\n\x04type\x18\x02 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x0f\n\x07negated\x18\x03 \x01(\x08\x12@\n\x08severity\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x41\n\tmodifiers\x18\x05 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12<\n\x0c\x61ge_of_onset\x18\x06 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12G\n\x12\x61ge_range_of_onset\x18\x07 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12H\n\x0e\x63lass_of_onset\x18\t \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassH\x00\x12;\n\x08\x65vidence\x18\n \x03(\x0b\x32).org.phenopackets.schema.v1.core.EvidenceB\x07\n\x05onset\"\x98\x01\n\x08\x45vidence\x12\x45\n\revidence_code\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x45\n\treference\x18\x02 \x01(\x0b\x32\x32.org.phenopackets.schema.v1.core.ExternalReference\"4\n\x11\x45xternalReference\x12\n\n\x02id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\xb7\x03\n\nIndividual\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\ralternate_ids\x18\x02 \x03(\t\x12\x31\n\rdate_of_birth\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x41\n\x11\x61ge_at_collection\x18\x04 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12L\n\x17\x61ge_range_at_collection\x18\x05 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12\x31\n\x03sex\x18\x06 \x01(\x0e\x32$.org.phenopackets.schema.v1.core.Sex\x12\x46\n\x0ekaryotypic_sex\x18\x07 \x01(\x0e\x32..org.phenopackets.schema.v1.core.KaryotypicSex\x12@\n\x08taxonomy\x18\x08 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x05\n\x03\x61ge\"\xea\x07\n\tBiosample\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\rindividual_id\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x46\n\x0esampled_tissue\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12O\n\x13phenotypic_features\x18\x05 \x03(\x0b\x32\x32.org.phenopackets.schema.v1.core.PhenotypicFeature\x12@\n\x08taxonomy\x18\x06 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12O\n\x1f\x61ge_of_individual_at_collection\x18\x07 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12Z\n%age_range_of_individual_at_collection\x18\x08 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12N\n\x16histological_diagnosis\x18\t \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12I\n\x11tumor_progression\x18\n \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x43\n\x0btumor_grade\x18\x0b \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12J\n\x12\x64iagnostic_markers\x18\x0c \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12=\n\tprocedure\x18\r \x01(\x0b\x32*.org.phenopackets.schema.v1.core.Procedure\x12;\n\thts_files\x18\x0e \x03(\x0b\x32(.org.phenopackets.schema.v1.core.HtsFile\x12:\n\x08variants\x18\x0f \x03(\x0b\x32(.org.phenopackets.schema.v1.core.Variant\x12\x19\n\x11is_control_sample\x18\x10 \x01(\x08\x42\x1e\n\x1cindividual_age_at_collection\"\x8c\x01\n\tProcedure\x12<\n\x04\x63ode\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x41\n\tbody_site\x18\x02 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\"\x12\n\x03\x41ge\x12\x0b\n\x03\x61ge\x18\x01 \x01(\t\"r\n\x08\x41geRange\x12\x33\n\x05start\x18\x01 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.Age\x12\x31\n\x03\x65nd\x18\x02 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.Age\"\xad\x03\n\x07\x44isease\x12<\n\x04term\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12<\n\x0c\x61ge_of_onset\x18\x02 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12G\n\x12\x61ge_range_of_onset\x18\x03 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12H\n\x0e\x63lass_of_onset\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassH\x00\x12\x45\n\rdisease_stage\x18\x05 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x43\n\x0btnm_finding\x18\x06 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x07\n\x05onset\"\xf6\x02\n\x08Pedigree\x12\x41\n\x07persons\x18\x01 \x03(\x0b\x32\x30.org.phenopackets.schema.v1.core.Pedigree.Person\x1a\xa6\x02\n\x06Person\x12\x11\n\tfamily_id\x18\x01 \x01(\t\x12\x15\n\rindividual_id\x18\x02 \x01(\t\x12\x13\n\x0bpaternal_id\x18\x03 \x01(\t\x12\x13\n\x0bmaternal_id\x18\x04 \x01(\t\x12\x31\n\x03sex\x18\x05 \x01(\x0e\x32$.org.phenopackets.schema.v1.core.Sex\x12X\n\x0f\x61\x66\x66\x65\x63ted_status\x18\x06 \x01(\x0e\x32?.org.phenopackets.schema.v1.core.Pedigree.Person.AffectedStatus\";\n\x0e\x41\x66\x66\x65\x63tedStatus\x12\x0b\n\x07MISSING\x10\x00\x12\x0e\n\nUNAFFECTED\x10\x01\x12\x0c\n\x08\x41\x46\x46\x45\x43TED\x10\x02\"\xa6\x03\n\x07HtsFile\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x46\n\nhts_format\x18\x03 \x01(\x0e\x32\x32.org.phenopackets.schema.v1.core.HtsFile.HtsFormat\x12\x17\n\x0fgenome_assembly\x18\x04 \x01(\t\x12u\n individual_to_sample_identifiers\x18\x05 \x03(\x0b\x32K.org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry\x1a\x44\n\"IndividualToSampleIdentifiersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"[\n\tHtsFormat\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03SAM\x10\x01\x12\x07\n\x03\x42\x41M\x10\x02\x12\x08\n\x04\x43RAM\x10\x03\x12\x07\n\x03VCF\x10\x04\x12\x07\n\x03\x42\x43\x46\x10\x05\x12\x08\n\x04GVCF\x10\x06\x12\t\n\x05\x46\x41STQ\x10\x07\"9\n\x04Gene\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\ralternate_ids\x18\x02 \x03(\t\x12\x0e\n\x06symbol\x18\x03 \x01(\t\"\xe3\x02\n\x07Variant\x12\x42\n\x0bhgvs_allele\x18\x02 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.HgvsAlleleH\x00\x12@\n\nvcf_allele\x18\x03 \x01(\x0b\x32*.org.phenopackets.schema.v1.core.VcfAlleleH\x00\x12\x42\n\x0bspdi_allele\x18\x04 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.SpdiAlleleH\x00\x12\x42\n\x0biscn_allele\x18\x05 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.IscnAlleleH\x00\x12@\n\x08zygosity\x18\x06 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x08\n\x06\x61llele\"&\n\nHgvsAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04hgvs\x18\x02 \x01(\t\"\x87\x01\n\tVcfAllele\x12\x13\n\x0bvcf_version\x18\x01 \x01(\t\x12\x17\n\x0fgenome_assembly\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\t\x12\x0b\n\x03\x63hr\x18\x04 \x01(\t\x12\x0b\n\x03pos\x18\x05 \x01(\x05\x12\x0b\n\x03ref\x18\x06 \x01(\t\x12\x0b\n\x03\x61lt\x18\x07 \x01(\t\x12\x0c\n\x04info\x18\x08 \x01(\t\"o\n\nSpdiAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06seq_id\x18\x02 \x01(\t\x12\x10\n\x08position\x18\x03 \x01(\x05\x12\x18\n\x10\x64\x65leted_sequence\x18\x04 \x01(\t\x12\x19\n\x11inserted_sequence\x18\x05 \x01(\t\"&\n\nIscnAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04iscn\x18\x02 \x01(\t*;\n\x03Sex\x12\x0f\n\x0bUNKNOWN_SEX\x10\x00\x12\n\n\x06\x46\x45MALE\x10\x01\x12\x08\n\x04MALE\x10\x02\x12\r\n\tOTHER_SEX\x10\x03*\x8c\x01\n\rKaryotypicSex\x12\x15\n\x11UNKNOWN_KARYOTYPE\x10\x00\x12\x06\n\x02XX\x10\x01\x12\x06\n\x02XY\x10\x02\x12\x06\n\x02XO\x10\x03\x12\x07\n\x03XXY\x10\x04\x12\x07\n\x03XXX\x10\x05\x12\x08\n\x04XXYY\x10\x06\x12\x08\n\x04XXXY\x10\x07\x12\x08\n\x04XXXX\x10\x08\x12\x07\n\x03XYY\x10\t\x12\x13\n\x0fOTHER_KARYOTYPE\x10\nB#\n\x1forg.phenopackets.schema.v1.coreP\x01\x62\x06proto3'
-  ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+    name="base.proto",
+    package="org.phenopackets.schema.v1.core",
+    syntax="proto3",
+    serialized_options=b"\n\037org.phenopackets.schema.v1.coreP\001",
+    create_key=_descriptor._internal_create_key,
+    serialized_pb=b'\n\nbase.proto\x12\x1forg.phenopackets.schema.v1.core\x1a\x1fgoogle/protobuf/timestamp.proto"\xce\x02\n\x08MetaData\x12+\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\ncreated_by\x18\x02 \x01(\t\x12\x14\n\x0csubmitted_by\x18\x03 \x01(\t\x12<\n\tresources\x18\x04 \x03(\x0b\x32).org.phenopackets.schema.v1.core.Resource\x12\x38\n\x07updates\x18\x05 \x03(\x0b\x32\'.org.phenopackets.schema.v1.core.Update\x12"\n\x1aphenopacket_schema_version\x18\x06 \x01(\t\x12O\n\x13\x65xternal_references\x18\x07 \x03(\x0b\x32\x32.org.phenopackets.schema.v1.core.ExternalReference"\\\n\x06Update\x12-\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\nupdated_by\x18\x02 \x01(\t\x12\x0f\n\x07\x63omment\x18\x03 \x01(\t"p\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\t\x12\x18\n\x10namespace_prefix\x18\x05 \x01(\t\x12\x12\n\niri_prefix\x18\x06 \x01(\t"*\n\rOntologyClass\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t"\x93\x04\n\x11PhenotypicFeature\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12<\n\x04type\x18\x02 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x0f\n\x07negated\x18\x03 \x01(\x08\x12@\n\x08severity\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x41\n\tmodifiers\x18\x05 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12<\n\x0c\x61ge_of_onset\x18\x06 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12G\n\x12\x61ge_range_of_onset\x18\x07 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12H\n\x0e\x63lass_of_onset\x18\t \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassH\x00\x12;\n\x08\x65vidence\x18\n \x03(\x0b\x32).org.phenopackets.schema.v1.core.EvidenceB\x07\n\x05onset"\x98\x01\n\x08\x45vidence\x12\x45\n\revidence_code\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x45\n\treference\x18\x02 \x01(\x0b\x32\x32.org.phenopackets.schema.v1.core.ExternalReference"4\n\x11\x45xternalReference\x12\n\n\x02id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t"\xb7\x03\n\nIndividual\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\ralternate_ids\x18\x02 \x03(\t\x12\x31\n\rdate_of_birth\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x41\n\x11\x61ge_at_collection\x18\x04 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12L\n\x17\x61ge_range_at_collection\x18\x05 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12\x31\n\x03sex\x18\x06 \x01(\x0e\x32$.org.phenopackets.schema.v1.core.Sex\x12\x46\n\x0ekaryotypic_sex\x18\x07 \x01(\x0e\x32..org.phenopackets.schema.v1.core.KaryotypicSex\x12@\n\x08taxonomy\x18\x08 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x05\n\x03\x61ge"\xea\x07\n\tBiosample\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\rindividual_id\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x46\n\x0esampled_tissue\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12O\n\x13phenotypic_features\x18\x05 \x03(\x0b\x32\x32.org.phenopackets.schema.v1.core.PhenotypicFeature\x12@\n\x08taxonomy\x18\x06 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12O\n\x1f\x61ge_of_individual_at_collection\x18\x07 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12Z\n%age_range_of_individual_at_collection\x18\x08 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12N\n\x16histological_diagnosis\x18\t \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12I\n\x11tumor_progression\x18\n \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x43\n\x0btumor_grade\x18\x0b \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12J\n\x12\x64iagnostic_markers\x18\x0c \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12=\n\tprocedure\x18\r \x01(\x0b\x32*.org.phenopackets.schema.v1.core.Procedure\x12;\n\thts_files\x18\x0e \x03(\x0b\x32(.org.phenopackets.schema.v1.core.HtsFile\x12:\n\x08variants\x18\x0f \x03(\x0b\x32(.org.phenopackets.schema.v1.core.Variant\x12\x19\n\x11is_control_sample\x18\x10 \x01(\x08\x42\x1e\n\x1cindividual_age_at_collection"\x8c\x01\n\tProcedure\x12<\n\x04\x63ode\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x41\n\tbody_site\x18\x02 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass"\x12\n\x03\x41ge\x12\x0b\n\x03\x61ge\x18\x01 \x01(\t"r\n\x08\x41geRange\x12\x33\n\x05start\x18\x01 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.Age\x12\x31\n\x03\x65nd\x18\x02 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.Age"\xad\x03\n\x07\x44isease\x12<\n\x04term\x18\x01 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12<\n\x0c\x61ge_of_onset\x18\x02 \x01(\x0b\x32$.org.phenopackets.schema.v1.core.AgeH\x00\x12G\n\x12\x61ge_range_of_onset\x18\x03 \x01(\x0b\x32).org.phenopackets.schema.v1.core.AgeRangeH\x00\x12H\n\x0e\x63lass_of_onset\x18\x04 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassH\x00\x12\x45\n\rdisease_stage\x18\x05 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClass\x12\x43\n\x0btnm_finding\x18\x06 \x03(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x07\n\x05onset"\xf6\x02\n\x08Pedigree\x12\x41\n\x07persons\x18\x01 \x03(\x0b\x32\x30.org.phenopackets.schema.v1.core.Pedigree.Person\x1a\xa6\x02\n\x06Person\x12\x11\n\tfamily_id\x18\x01 \x01(\t\x12\x15\n\rindividual_id\x18\x02 \x01(\t\x12\x13\n\x0bpaternal_id\x18\x03 \x01(\t\x12\x13\n\x0bmaternal_id\x18\x04 \x01(\t\x12\x31\n\x03sex\x18\x05 \x01(\x0e\x32$.org.phenopackets.schema.v1.core.Sex\x12X\n\x0f\x61\x66\x66\x65\x63ted_status\x18\x06 \x01(\x0e\x32?.org.phenopackets.schema.v1.core.Pedigree.Person.AffectedStatus";\n\x0e\x41\x66\x66\x65\x63tedStatus\x12\x0b\n\x07MISSING\x10\x00\x12\x0e\n\nUNAFFECTED\x10\x01\x12\x0c\n\x08\x41\x46\x46\x45\x43TED\x10\x02"\xa6\x03\n\x07HtsFile\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x46\n\nhts_format\x18\x03 \x01(\x0e\x32\x32.org.phenopackets.schema.v1.core.HtsFile.HtsFormat\x12\x17\n\x0fgenome_assembly\x18\x04 \x01(\t\x12u\n individual_to_sample_identifiers\x18\x05 \x03(\x0b\x32K.org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry\x1a\x44\n"IndividualToSampleIdentifiersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01"[\n\tHtsFormat\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03SAM\x10\x01\x12\x07\n\x03\x42\x41M\x10\x02\x12\x08\n\x04\x43RAM\x10\x03\x12\x07\n\x03VCF\x10\x04\x12\x07\n\x03\x42\x43\x46\x10\x05\x12\x08\n\x04GVCF\x10\x06\x12\t\n\x05\x46\x41STQ\x10\x07"9\n\x04Gene\x12\n\n\x02id\x18\x01 \x01(\t\x12\x15\n\ralternate_ids\x18\x02 \x03(\t\x12\x0e\n\x06symbol\x18\x03 \x01(\t"\xe3\x02\n\x07Variant\x12\x42\n\x0bhgvs_allele\x18\x02 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.HgvsAlleleH\x00\x12@\n\nvcf_allele\x18\x03 \x01(\x0b\x32*.org.phenopackets.schema.v1.core.VcfAlleleH\x00\x12\x42\n\x0bspdi_allele\x18\x04 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.SpdiAlleleH\x00\x12\x42\n\x0biscn_allele\x18\x05 \x01(\x0b\x32+.org.phenopackets.schema.v1.core.IscnAlleleH\x00\x12@\n\x08zygosity\x18\x06 \x01(\x0b\x32..org.phenopackets.schema.v1.core.OntologyClassB\x08\n\x06\x61llele"&\n\nHgvsAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04hgvs\x18\x02 \x01(\t"\x87\x01\n\tVcfAllele\x12\x13\n\x0bvcf_version\x18\x01 \x01(\t\x12\x17\n\x0fgenome_assembly\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\t\x12\x0b\n\x03\x63hr\x18\x04 \x01(\t\x12\x0b\n\x03pos\x18\x05 \x01(\x05\x12\x0b\n\x03ref\x18\x06 \x01(\t\x12\x0b\n\x03\x61lt\x18\x07 \x01(\t\x12\x0c\n\x04info\x18\x08 \x01(\t"o\n\nSpdiAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06seq_id\x18\x02 \x01(\t\x12\x10\n\x08position\x18\x03 \x01(\x05\x12\x18\n\x10\x64\x65leted_sequence\x18\x04 \x01(\t\x12\x19\n\x11inserted_sequence\x18\x05 \x01(\t"&\n\nIscnAllele\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04iscn\x18\x02 \x01(\t*;\n\x03Sex\x12\x0f\n\x0bUNKNOWN_SEX\x10\x00\x12\n\n\x06\x46\x45MALE\x10\x01\x12\x08\n\x04MALE\x10\x02\x12\r\n\tOTHER_SEX\x10\x03*\x8c\x01\n\rKaryotypicSex\x12\x15\n\x11UNKNOWN_KARYOTYPE\x10\x00\x12\x06\n\x02XX\x10\x01\x12\x06\n\x02XY\x10\x02\x12\x06\n\x02XO\x10\x03\x12\x07\n\x03XXY\x10\x04\x12\x07\n\x03XXX\x10\x05\x12\x08\n\x04XXYY\x10\x06\x12\x08\n\x04XXXY\x10\x07\x12\x08\n\x04XXXX\x10\x08\x12\x07\n\x03XYY\x10\t\x12\x13\n\x0fOTHER_KARYOTYPE\x10\nB#\n\x1forg.phenopackets.schema.v1.coreP\x01\x62\x06proto3',
+    dependencies=[
+        google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,
+    ],
+)
 
 _SEX = _descriptor.EnumDescriptor(
-  name='Sex',
-  full_name='org.phenopackets.schema.v1.core.Sex',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN_SEX', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='FEMALE', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='MALE', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='OTHER_SEX', index=3, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=5120,
-  serialized_end=5179,
+    name="Sex",
+    full_name="org.phenopackets.schema.v1.core.Sex",
+    filename=None,
+    file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
+    values=[
+        _descriptor.EnumValueDescriptor(
+            name="UNKNOWN_SEX",
+            index=0,
+            number=0,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="FEMALE",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="MALE",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="OTHER_SEX",
+            index=3,
+            number=3,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    containing_type=None,
+    serialized_options=None,
+    serialized_start=5120,
+    serialized_end=5179,
 )
 _sym_db.RegisterEnumDescriptor(_SEX)
 
 Sex = enum_type_wrapper.EnumTypeWrapper(_SEX)
 _KARYOTYPICSEX = _descriptor.EnumDescriptor(
-  name='KaryotypicSex',
-  full_name='org.phenopackets.schema.v1.core.KaryotypicSex',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN_KARYOTYPE', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XX', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XY', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XO', index=3, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XXY', index=4, number=4,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XXX', index=5, number=5,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XXYY', index=6, number=6,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XXXY', index=7, number=7,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XXXX', index=8, number=8,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='XYY', index=9, number=9,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='OTHER_KARYOTYPE', index=10, number=10,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=5182,
-  serialized_end=5322,
+    name="KaryotypicSex",
+    full_name="org.phenopackets.schema.v1.core.KaryotypicSex",
+    filename=None,
+    file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
+    values=[
+        _descriptor.EnumValueDescriptor(
+            name="UNKNOWN_KARYOTYPE",
+            index=0,
+            number=0,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XX",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XY",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XO",
+            index=3,
+            number=3,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XXY",
+            index=4,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XXX",
+            index=5,
+            number=5,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XXYY",
+            index=6,
+            number=6,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XXXY",
+            index=7,
+            number=7,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XXXX",
+            index=8,
+            number=8,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="XYY",
+            index=9,
+            number=9,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="OTHER_KARYOTYPE",
+            index=10,
+            number=10,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    containing_type=None,
+    serialized_options=None,
+    serialized_start=5182,
+    serialized_end=5322,
 )
 _sym_db.RegisterEnumDescriptor(_KARYOTYPICSEX)
 
@@ -150,1709 +198,3091 @@ OTHER_KARYOTYPE = 10
 
 
 _PEDIGREE_PERSON_AFFECTEDSTATUS = _descriptor.EnumDescriptor(
-  name='AffectedStatus',
-  full_name='org.phenopackets.schema.v1.core.Pedigree.Person.AffectedStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='MISSING', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='UNAFFECTED', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='AFFECTED', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=3886,
-  serialized_end=3945,
+    name="AffectedStatus",
+    full_name="org.phenopackets.schema.v1.core.Pedigree.Person.AffectedStatus",
+    filename=None,
+    file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
+    values=[
+        _descriptor.EnumValueDescriptor(
+            name="MISSING",
+            index=0,
+            number=0,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="UNAFFECTED",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="AFFECTED",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    containing_type=None,
+    serialized_options=None,
+    serialized_start=3886,
+    serialized_end=3945,
 )
 _sym_db.RegisterEnumDescriptor(_PEDIGREE_PERSON_AFFECTEDSTATUS)
 
 _HTSFILE_HTSFORMAT = _descriptor.EnumDescriptor(
-  name='HtsFormat',
-  full_name='org.phenopackets.schema.v1.core.HtsFile.HtsFormat',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='SAM', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='BAM', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='CRAM', index=3, number=3,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='VCF', index=4, number=4,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='BCF', index=5, number=5,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='GVCF', index=6, number=6,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='FASTQ', index=7, number=7,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=4279,
-  serialized_end=4370,
+    name="HtsFormat",
+    full_name="org.phenopackets.schema.v1.core.HtsFile.HtsFormat",
+    filename=None,
+    file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
+    values=[
+        _descriptor.EnumValueDescriptor(
+            name="UNKNOWN",
+            index=0,
+            number=0,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="SAM",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="BAM",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="CRAM",
+            index=3,
+            number=3,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="VCF",
+            index=4,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="BCF",
+            index=5,
+            number=5,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="GVCF",
+            index=6,
+            number=6,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.EnumValueDescriptor(
+            name="FASTQ",
+            index=7,
+            number=7,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    containing_type=None,
+    serialized_options=None,
+    serialized_start=4279,
+    serialized_end=4370,
 )
 _sym_db.RegisterEnumDescriptor(_HTSFILE_HTSFORMAT)
 
 
 _METADATA = _descriptor.Descriptor(
-  name='MetaData',
-  full_name='org.phenopackets.schema.v1.core.MetaData',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='created', full_name='org.phenopackets.schema.v1.core.MetaData.created', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='created_by', full_name='org.phenopackets.schema.v1.core.MetaData.created_by', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='submitted_by', full_name='org.phenopackets.schema.v1.core.MetaData.submitted_by', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='resources', full_name='org.phenopackets.schema.v1.core.MetaData.resources', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='updates', full_name='org.phenopackets.schema.v1.core.MetaData.updates', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='phenopacket_schema_version', full_name='org.phenopackets.schema.v1.core.MetaData.phenopacket_schema_version', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='external_references', full_name='org.phenopackets.schema.v1.core.MetaData.external_references', index=6,
-      number=7, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=81,
-  serialized_end=415,
+    name="MetaData",
+    full_name="org.phenopackets.schema.v1.core.MetaData",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="created",
+            full_name="org.phenopackets.schema.v1.core.MetaData.created",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="created_by",
+            full_name="org.phenopackets.schema.v1.core.MetaData.created_by",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="submitted_by",
+            full_name="org.phenopackets.schema.v1.core.MetaData.submitted_by",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="resources",
+            full_name="org.phenopackets.schema.v1.core.MetaData.resources",
+            index=3,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="updates",
+            full_name="org.phenopackets.schema.v1.core.MetaData.updates",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="phenopacket_schema_version",
+            full_name="org.phenopackets.schema.v1.core.MetaData.phenopacket_schema_version",
+            index=5,
+            number=6,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="external_references",
+            full_name="org.phenopackets.schema.v1.core.MetaData.external_references",
+            index=6,
+            number=7,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=81,
+    serialized_end=415,
 )
 
 
 _UPDATE = _descriptor.Descriptor(
-  name='Update',
-  full_name='org.phenopackets.schema.v1.core.Update',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='org.phenopackets.schema.v1.core.Update.timestamp', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='updated_by', full_name='org.phenopackets.schema.v1.core.Update.updated_by', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='comment', full_name='org.phenopackets.schema.v1.core.Update.comment', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=417,
-  serialized_end=509,
+    name="Update",
+    full_name="org.phenopackets.schema.v1.core.Update",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="timestamp",
+            full_name="org.phenopackets.schema.v1.core.Update.timestamp",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="updated_by",
+            full_name="org.phenopackets.schema.v1.core.Update.updated_by",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="comment",
+            full_name="org.phenopackets.schema.v1.core.Update.comment",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=417,
+    serialized_end=509,
 )
 
 
 _RESOURCE = _descriptor.Descriptor(
-  name='Resource',
-  full_name='org.phenopackets.schema.v1.core.Resource',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.Resource.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='org.phenopackets.schema.v1.core.Resource.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='org.phenopackets.schema.v1.core.Resource.url', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='version', full_name='org.phenopackets.schema.v1.core.Resource.version', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='namespace_prefix', full_name='org.phenopackets.schema.v1.core.Resource.namespace_prefix', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='iri_prefix', full_name='org.phenopackets.schema.v1.core.Resource.iri_prefix', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=511,
-  serialized_end=623,
+    name="Resource",
+    full_name="org.phenopackets.schema.v1.core.Resource",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.Resource.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="name",
+            full_name="org.phenopackets.schema.v1.core.Resource.name",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="url",
+            full_name="org.phenopackets.schema.v1.core.Resource.url",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="version",
+            full_name="org.phenopackets.schema.v1.core.Resource.version",
+            index=3,
+            number=4,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="namespace_prefix",
+            full_name="org.phenopackets.schema.v1.core.Resource.namespace_prefix",
+            index=4,
+            number=5,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="iri_prefix",
+            full_name="org.phenopackets.schema.v1.core.Resource.iri_prefix",
+            index=5,
+            number=6,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=511,
+    serialized_end=623,
 )
 
 
 _ONTOLOGYCLASS = _descriptor.Descriptor(
-  name='OntologyClass',
-  full_name='org.phenopackets.schema.v1.core.OntologyClass',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.OntologyClass.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='label', full_name='org.phenopackets.schema.v1.core.OntologyClass.label', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=625,
-  serialized_end=667,
+    name="OntologyClass",
+    full_name="org.phenopackets.schema.v1.core.OntologyClass",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.OntologyClass.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="label",
+            full_name="org.phenopackets.schema.v1.core.OntologyClass.label",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=625,
+    serialized_end=667,
 )
 
 
 _PHENOTYPICFEATURE = _descriptor.Descriptor(
-  name='PhenotypicFeature',
-  full_name='org.phenopackets.schema.v1.core.PhenotypicFeature',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='description', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.description', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='type', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.type', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='negated', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.negated', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='severity', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.severity', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='modifiers', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.modifiers', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_of_onset', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.age_of_onset', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_range_of_onset', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.age_range_of_onset', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='class_of_onset', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.class_of_onset', index=7,
-      number=9, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='evidence', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.evidence', index=8,
-      number=10, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='onset', full_name='org.phenopackets.schema.v1.core.PhenotypicFeature.onset',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=670,
-  serialized_end=1201,
+    name="PhenotypicFeature",
+    full_name="org.phenopackets.schema.v1.core.PhenotypicFeature",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="description",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.description",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="type",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.type",
+            index=1,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="negated",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.negated",
+            index=2,
+            number=3,
+            type=8,
+            cpp_type=7,
+            label=1,
+            has_default_value=False,
+            default_value=False,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="severity",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.severity",
+            index=3,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="modifiers",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.modifiers",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_of_onset",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.age_of_onset",
+            index=5,
+            number=6,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_range_of_onset",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.age_range_of_onset",
+            index=6,
+            number=7,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="class_of_onset",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.class_of_onset",
+            index=7,
+            number=9,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="evidence",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.evidence",
+            index=8,
+            number=10,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[
+        _descriptor.OneofDescriptor(
+            name="onset",
+            full_name="org.phenopackets.schema.v1.core.PhenotypicFeature.onset",
+            index=0,
+            containing_type=None,
+            create_key=_descriptor._internal_create_key,
+            fields=[],
+        ),
+    ],
+    serialized_start=670,
+    serialized_end=1201,
 )
 
 
 _EVIDENCE = _descriptor.Descriptor(
-  name='Evidence',
-  full_name='org.phenopackets.schema.v1.core.Evidence',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='evidence_code', full_name='org.phenopackets.schema.v1.core.Evidence.evidence_code', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='reference', full_name='org.phenopackets.schema.v1.core.Evidence.reference', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1204,
-  serialized_end=1356,
+    name="Evidence",
+    full_name="org.phenopackets.schema.v1.core.Evidence",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="evidence_code",
+            full_name="org.phenopackets.schema.v1.core.Evidence.evidence_code",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="reference",
+            full_name="org.phenopackets.schema.v1.core.Evidence.reference",
+            index=1,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=1204,
+    serialized_end=1356,
 )
 
 
 _EXTERNALREFERENCE = _descriptor.Descriptor(
-  name='ExternalReference',
-  full_name='org.phenopackets.schema.v1.core.ExternalReference',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.ExternalReference.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='org.phenopackets.schema.v1.core.ExternalReference.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1358,
-  serialized_end=1410,
+    name="ExternalReference",
+    full_name="org.phenopackets.schema.v1.core.ExternalReference",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.ExternalReference.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="description",
+            full_name="org.phenopackets.schema.v1.core.ExternalReference.description",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=1358,
+    serialized_end=1410,
 )
 
 
 _INDIVIDUAL = _descriptor.Descriptor(
-  name='Individual',
-  full_name='org.phenopackets.schema.v1.core.Individual',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.Individual.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='alternate_ids', full_name='org.phenopackets.schema.v1.core.Individual.alternate_ids', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='date_of_birth', full_name='org.phenopackets.schema.v1.core.Individual.date_of_birth', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_at_collection', full_name='org.phenopackets.schema.v1.core.Individual.age_at_collection', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_range_at_collection', full_name='org.phenopackets.schema.v1.core.Individual.age_range_at_collection', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sex', full_name='org.phenopackets.schema.v1.core.Individual.sex', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='karyotypic_sex', full_name='org.phenopackets.schema.v1.core.Individual.karyotypic_sex', index=6,
-      number=7, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='taxonomy', full_name='org.phenopackets.schema.v1.core.Individual.taxonomy', index=7,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='age', full_name='org.phenopackets.schema.v1.core.Individual.age',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=1413,
-  serialized_end=1852,
+    name="Individual",
+    full_name="org.phenopackets.schema.v1.core.Individual",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.Individual.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="alternate_ids",
+            full_name="org.phenopackets.schema.v1.core.Individual.alternate_ids",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="date_of_birth",
+            full_name="org.phenopackets.schema.v1.core.Individual.date_of_birth",
+            index=2,
+            number=3,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_at_collection",
+            full_name="org.phenopackets.schema.v1.core.Individual.age_at_collection",
+            index=3,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_range_at_collection",
+            full_name="org.phenopackets.schema.v1.core.Individual.age_range_at_collection",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="sex",
+            full_name="org.phenopackets.schema.v1.core.Individual.sex",
+            index=5,
+            number=6,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="karyotypic_sex",
+            full_name="org.phenopackets.schema.v1.core.Individual.karyotypic_sex",
+            index=6,
+            number=7,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="taxonomy",
+            full_name="org.phenopackets.schema.v1.core.Individual.taxonomy",
+            index=7,
+            number=8,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[
+        _descriptor.OneofDescriptor(
+            name="age",
+            full_name="org.phenopackets.schema.v1.core.Individual.age",
+            index=0,
+            containing_type=None,
+            create_key=_descriptor._internal_create_key,
+            fields=[],
+        ),
+    ],
+    serialized_start=1413,
+    serialized_end=1852,
 )
 
 
 _BIOSAMPLE = _descriptor.Descriptor(
-  name='Biosample',
-  full_name='org.phenopackets.schema.v1.core.Biosample',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.Biosample.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='individual_id', full_name='org.phenopackets.schema.v1.core.Biosample.individual_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='org.phenopackets.schema.v1.core.Biosample.description', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sampled_tissue', full_name='org.phenopackets.schema.v1.core.Biosample.sampled_tissue', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='phenotypic_features', full_name='org.phenopackets.schema.v1.core.Biosample.phenotypic_features', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='taxonomy', full_name='org.phenopackets.schema.v1.core.Biosample.taxonomy', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_of_individual_at_collection', full_name='org.phenopackets.schema.v1.core.Biosample.age_of_individual_at_collection', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_range_of_individual_at_collection', full_name='org.phenopackets.schema.v1.core.Biosample.age_range_of_individual_at_collection', index=7,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='histological_diagnosis', full_name='org.phenopackets.schema.v1.core.Biosample.histological_diagnosis', index=8,
-      number=9, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tumor_progression', full_name='org.phenopackets.schema.v1.core.Biosample.tumor_progression', index=9,
-      number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tumor_grade', full_name='org.phenopackets.schema.v1.core.Biosample.tumor_grade', index=10,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='diagnostic_markers', full_name='org.phenopackets.schema.v1.core.Biosample.diagnostic_markers', index=11,
-      number=12, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='procedure', full_name='org.phenopackets.schema.v1.core.Biosample.procedure', index=12,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='hts_files', full_name='org.phenopackets.schema.v1.core.Biosample.hts_files', index=13,
-      number=14, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='variants', full_name='org.phenopackets.schema.v1.core.Biosample.variants', index=14,
-      number=15, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='is_control_sample', full_name='org.phenopackets.schema.v1.core.Biosample.is_control_sample', index=15,
-      number=16, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='individual_age_at_collection', full_name='org.phenopackets.schema.v1.core.Biosample.individual_age_at_collection',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=1855,
-  serialized_end=2857,
+    name="Biosample",
+    full_name="org.phenopackets.schema.v1.core.Biosample",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.Biosample.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="individual_id",
+            full_name="org.phenopackets.schema.v1.core.Biosample.individual_id",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="description",
+            full_name="org.phenopackets.schema.v1.core.Biosample.description",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="sampled_tissue",
+            full_name="org.phenopackets.schema.v1.core.Biosample.sampled_tissue",
+            index=3,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="phenotypic_features",
+            full_name="org.phenopackets.schema.v1.core.Biosample.phenotypic_features",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="taxonomy",
+            full_name="org.phenopackets.schema.v1.core.Biosample.taxonomy",
+            index=5,
+            number=6,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_of_individual_at_collection",
+            full_name="org.phenopackets.schema.v1.core.Biosample.age_of_individual_at_collection",
+            index=6,
+            number=7,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_range_of_individual_at_collection",
+            full_name="org.phenopackets.schema.v1.core.Biosample.age_range_of_individual_at_collection",
+            index=7,
+            number=8,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="histological_diagnosis",
+            full_name="org.phenopackets.schema.v1.core.Biosample.histological_diagnosis",
+            index=8,
+            number=9,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="tumor_progression",
+            full_name="org.phenopackets.schema.v1.core.Biosample.tumor_progression",
+            index=9,
+            number=10,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="tumor_grade",
+            full_name="org.phenopackets.schema.v1.core.Biosample.tumor_grade",
+            index=10,
+            number=11,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="diagnostic_markers",
+            full_name="org.phenopackets.schema.v1.core.Biosample.diagnostic_markers",
+            index=11,
+            number=12,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="procedure",
+            full_name="org.phenopackets.schema.v1.core.Biosample.procedure",
+            index=12,
+            number=13,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="hts_files",
+            full_name="org.phenopackets.schema.v1.core.Biosample.hts_files",
+            index=13,
+            number=14,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="variants",
+            full_name="org.phenopackets.schema.v1.core.Biosample.variants",
+            index=14,
+            number=15,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="is_control_sample",
+            full_name="org.phenopackets.schema.v1.core.Biosample.is_control_sample",
+            index=15,
+            number=16,
+            type=8,
+            cpp_type=7,
+            label=1,
+            has_default_value=False,
+            default_value=False,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[
+        _descriptor.OneofDescriptor(
+            name="individual_age_at_collection",
+            full_name="org.phenopackets.schema.v1.core.Biosample.individual_age_at_collection",
+            index=0,
+            containing_type=None,
+            create_key=_descriptor._internal_create_key,
+            fields=[],
+        ),
+    ],
+    serialized_start=1855,
+    serialized_end=2857,
 )
 
 
 _PROCEDURE = _descriptor.Descriptor(
-  name='Procedure',
-  full_name='org.phenopackets.schema.v1.core.Procedure',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='code', full_name='org.phenopackets.schema.v1.core.Procedure.code', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='body_site', full_name='org.phenopackets.schema.v1.core.Procedure.body_site', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2860,
-  serialized_end=3000,
+    name="Procedure",
+    full_name="org.phenopackets.schema.v1.core.Procedure",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="code",
+            full_name="org.phenopackets.schema.v1.core.Procedure.code",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="body_site",
+            full_name="org.phenopackets.schema.v1.core.Procedure.body_site",
+            index=1,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=2860,
+    serialized_end=3000,
 )
 
 
 _AGE = _descriptor.Descriptor(
-  name='Age',
-  full_name='org.phenopackets.schema.v1.core.Age',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='age', full_name='org.phenopackets.schema.v1.core.Age.age', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3002,
-  serialized_end=3020,
+    name="Age",
+    full_name="org.phenopackets.schema.v1.core.Age",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="age",
+            full_name="org.phenopackets.schema.v1.core.Age.age",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=3002,
+    serialized_end=3020,
 )
 
 
 _AGERANGE = _descriptor.Descriptor(
-  name='AgeRange',
-  full_name='org.phenopackets.schema.v1.core.AgeRange',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='start', full_name='org.phenopackets.schema.v1.core.AgeRange.start', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='end', full_name='org.phenopackets.schema.v1.core.AgeRange.end', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3022,
-  serialized_end=3136,
+    name="AgeRange",
+    full_name="org.phenopackets.schema.v1.core.AgeRange",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="start",
+            full_name="org.phenopackets.schema.v1.core.AgeRange.start",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="end",
+            full_name="org.phenopackets.schema.v1.core.AgeRange.end",
+            index=1,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=3022,
+    serialized_end=3136,
 )
 
 
 _DISEASE = _descriptor.Descriptor(
-  name='Disease',
-  full_name='org.phenopackets.schema.v1.core.Disease',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='term', full_name='org.phenopackets.schema.v1.core.Disease.term', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_of_onset', full_name='org.phenopackets.schema.v1.core.Disease.age_of_onset', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='age_range_of_onset', full_name='org.phenopackets.schema.v1.core.Disease.age_range_of_onset', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='class_of_onset', full_name='org.phenopackets.schema.v1.core.Disease.class_of_onset', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='disease_stage', full_name='org.phenopackets.schema.v1.core.Disease.disease_stage', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tnm_finding', full_name='org.phenopackets.schema.v1.core.Disease.tnm_finding', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='onset', full_name='org.phenopackets.schema.v1.core.Disease.onset',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=3139,
-  serialized_end=3568,
+    name="Disease",
+    full_name="org.phenopackets.schema.v1.core.Disease",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="term",
+            full_name="org.phenopackets.schema.v1.core.Disease.term",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_of_onset",
+            full_name="org.phenopackets.schema.v1.core.Disease.age_of_onset",
+            index=1,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="age_range_of_onset",
+            full_name="org.phenopackets.schema.v1.core.Disease.age_range_of_onset",
+            index=2,
+            number=3,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="class_of_onset",
+            full_name="org.phenopackets.schema.v1.core.Disease.class_of_onset",
+            index=3,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="disease_stage",
+            full_name="org.phenopackets.schema.v1.core.Disease.disease_stage",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="tnm_finding",
+            full_name="org.phenopackets.schema.v1.core.Disease.tnm_finding",
+            index=5,
+            number=6,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[
+        _descriptor.OneofDescriptor(
+            name="onset",
+            full_name="org.phenopackets.schema.v1.core.Disease.onset",
+            index=0,
+            containing_type=None,
+            create_key=_descriptor._internal_create_key,
+            fields=[],
+        ),
+    ],
+    serialized_start=3139,
+    serialized_end=3568,
 )
 
 
 _PEDIGREE_PERSON = _descriptor.Descriptor(
-  name='Person',
-  full_name='org.phenopackets.schema.v1.core.Pedigree.Person',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='family_id', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.family_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='individual_id', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.individual_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='paternal_id', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.paternal_id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='maternal_id', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.maternal_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sex', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.sex', index=4,
-      number=5, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='affected_status', full_name='org.phenopackets.schema.v1.core.Pedigree.Person.affected_status', index=5,
-      number=6, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _PEDIGREE_PERSON_AFFECTEDSTATUS,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3651,
-  serialized_end=3945,
+    name="Person",
+    full_name="org.phenopackets.schema.v1.core.Pedigree.Person",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="family_id",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.family_id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="individual_id",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.individual_id",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="paternal_id",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.paternal_id",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="maternal_id",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.maternal_id",
+            index=3,
+            number=4,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="sex",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.sex",
+            index=4,
+            number=5,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="affected_status",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.Person.affected_status",
+            index=5,
+            number=6,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[
+        _PEDIGREE_PERSON_AFFECTEDSTATUS,
+    ],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=3651,
+    serialized_end=3945,
 )
 
 _PEDIGREE = _descriptor.Descriptor(
-  name='Pedigree',
-  full_name='org.phenopackets.schema.v1.core.Pedigree',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='persons', full_name='org.phenopackets.schema.v1.core.Pedigree.persons', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[_PEDIGREE_PERSON, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3571,
-  serialized_end=3945,
+    name="Pedigree",
+    full_name="org.phenopackets.schema.v1.core.Pedigree",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="persons",
+            full_name="org.phenopackets.schema.v1.core.Pedigree.persons",
+            index=0,
+            number=1,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[
+        _PEDIGREE_PERSON,
+    ],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=3571,
+    serialized_end=3945,
 )
 
 
 _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY = _descriptor.Descriptor(
-  name='IndividualToSampleIdentifiersEntry',
-  full_name='org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=b'8\001',
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4209,
-  serialized_end=4277,
+    name="IndividualToSampleIdentifiersEntry",
+    full_name="org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="key",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry.key",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="value",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry.value",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=b"8\001",
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=4209,
+    serialized_end=4277,
 )
 
 _HTSFILE = _descriptor.Descriptor(
-  name='HtsFile',
-  full_name='org.phenopackets.schema.v1.core.HtsFile',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='uri', full_name='org.phenopackets.schema.v1.core.HtsFile.uri', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='org.phenopackets.schema.v1.core.HtsFile.description', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='hts_format', full_name='org.phenopackets.schema.v1.core.HtsFile.hts_format', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='genome_assembly', full_name='org.phenopackets.schema.v1.core.HtsFile.genome_assembly', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='individual_to_sample_identifiers', full_name='org.phenopackets.schema.v1.core.HtsFile.individual_to_sample_identifiers', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[_HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY, ],
-  enum_types=[
-    _HTSFILE_HTSFORMAT,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3948,
-  serialized_end=4370,
+    name="HtsFile",
+    full_name="org.phenopackets.schema.v1.core.HtsFile",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="uri",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.uri",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="description",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.description",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="hts_format",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.hts_format",
+            index=2,
+            number=3,
+            type=14,
+            cpp_type=8,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="genome_assembly",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.genome_assembly",
+            index=3,
+            number=4,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="individual_to_sample_identifiers",
+            full_name="org.phenopackets.schema.v1.core.HtsFile.individual_to_sample_identifiers",
+            index=4,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[
+        _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY,
+    ],
+    enum_types=[
+        _HTSFILE_HTSFORMAT,
+    ],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=3948,
+    serialized_end=4370,
 )
 
 
 _GENE = _descriptor.Descriptor(
-  name='Gene',
-  full_name='org.phenopackets.schema.v1.core.Gene',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.Gene.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='alternate_ids', full_name='org.phenopackets.schema.v1.core.Gene.alternate_ids', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='symbol', full_name='org.phenopackets.schema.v1.core.Gene.symbol', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4372,
-  serialized_end=4429,
+    name="Gene",
+    full_name="org.phenopackets.schema.v1.core.Gene",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.Gene.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="alternate_ids",
+            full_name="org.phenopackets.schema.v1.core.Gene.alternate_ids",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="symbol",
+            full_name="org.phenopackets.schema.v1.core.Gene.symbol",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=4372,
+    serialized_end=4429,
 )
 
 
 _VARIANT = _descriptor.Descriptor(
-  name='Variant',
-  full_name='org.phenopackets.schema.v1.core.Variant',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='hgvs_allele', full_name='org.phenopackets.schema.v1.core.Variant.hgvs_allele', index=0,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='vcf_allele', full_name='org.phenopackets.schema.v1.core.Variant.vcf_allele', index=1,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='spdi_allele', full_name='org.phenopackets.schema.v1.core.Variant.spdi_allele', index=2,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='iscn_allele', full_name='org.phenopackets.schema.v1.core.Variant.iscn_allele', index=3,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='zygosity', full_name='org.phenopackets.schema.v1.core.Variant.zygosity', index=4,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='allele', full_name='org.phenopackets.schema.v1.core.Variant.allele',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=4432,
-  serialized_end=4787,
+    name="Variant",
+    full_name="org.phenopackets.schema.v1.core.Variant",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="hgvs_allele",
+            full_name="org.phenopackets.schema.v1.core.Variant.hgvs_allele",
+            index=0,
+            number=2,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="vcf_allele",
+            full_name="org.phenopackets.schema.v1.core.Variant.vcf_allele",
+            index=1,
+            number=3,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="spdi_allele",
+            full_name="org.phenopackets.schema.v1.core.Variant.spdi_allele",
+            index=2,
+            number=4,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="iscn_allele",
+            full_name="org.phenopackets.schema.v1.core.Variant.iscn_allele",
+            index=3,
+            number=5,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="zygosity",
+            full_name="org.phenopackets.schema.v1.core.Variant.zygosity",
+            index=4,
+            number=6,
+            type=11,
+            cpp_type=10,
+            label=1,
+            has_default_value=False,
+            default_value=None,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[
+        _descriptor.OneofDescriptor(
+            name="allele",
+            full_name="org.phenopackets.schema.v1.core.Variant.allele",
+            index=0,
+            containing_type=None,
+            create_key=_descriptor._internal_create_key,
+            fields=[],
+        ),
+    ],
+    serialized_start=4432,
+    serialized_end=4787,
 )
 
 
 _HGVSALLELE = _descriptor.Descriptor(
-  name='HgvsAllele',
-  full_name='org.phenopackets.schema.v1.core.HgvsAllele',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.HgvsAllele.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='hgvs', full_name='org.phenopackets.schema.v1.core.HgvsAllele.hgvs', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4789,
-  serialized_end=4827,
+    name="HgvsAllele",
+    full_name="org.phenopackets.schema.v1.core.HgvsAllele",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.HgvsAllele.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="hgvs",
+            full_name="org.phenopackets.schema.v1.core.HgvsAllele.hgvs",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=4789,
+    serialized_end=4827,
 )
 
 
 _VCFALLELE = _descriptor.Descriptor(
-  name='VcfAllele',
-  full_name='org.phenopackets.schema.v1.core.VcfAllele',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='vcf_version', full_name='org.phenopackets.schema.v1.core.VcfAllele.vcf_version', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='genome_assembly', full_name='org.phenopackets.schema.v1.core.VcfAllele.genome_assembly', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.VcfAllele.id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='chr', full_name='org.phenopackets.schema.v1.core.VcfAllele.chr', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='pos', full_name='org.phenopackets.schema.v1.core.VcfAllele.pos', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='ref', full_name='org.phenopackets.schema.v1.core.VcfAllele.ref', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='alt', full_name='org.phenopackets.schema.v1.core.VcfAllele.alt', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='info', full_name='org.phenopackets.schema.v1.core.VcfAllele.info', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4830,
-  serialized_end=4965,
+    name="VcfAllele",
+    full_name="org.phenopackets.schema.v1.core.VcfAllele",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="vcf_version",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.vcf_version",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="genome_assembly",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.genome_assembly",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.id",
+            index=2,
+            number=3,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="chr",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.chr",
+            index=3,
+            number=4,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="pos",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.pos",
+            index=4,
+            number=5,
+            type=5,
+            cpp_type=1,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="ref",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.ref",
+            index=5,
+            number=6,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="alt",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.alt",
+            index=6,
+            number=7,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="info",
+            full_name="org.phenopackets.schema.v1.core.VcfAllele.info",
+            index=7,
+            number=8,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=4830,
+    serialized_end=4965,
 )
 
 
 _SPDIALLELE = _descriptor.Descriptor(
-  name='SpdiAllele',
-  full_name='org.phenopackets.schema.v1.core.SpdiAllele',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.SpdiAllele.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='seq_id', full_name='org.phenopackets.schema.v1.core.SpdiAllele.seq_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='position', full_name='org.phenopackets.schema.v1.core.SpdiAllele.position', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='deleted_sequence', full_name='org.phenopackets.schema.v1.core.SpdiAllele.deleted_sequence', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='inserted_sequence', full_name='org.phenopackets.schema.v1.core.SpdiAllele.inserted_sequence', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4967,
-  serialized_end=5078,
+    name="SpdiAllele",
+    full_name="org.phenopackets.schema.v1.core.SpdiAllele",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.SpdiAllele.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="seq_id",
+            full_name="org.phenopackets.schema.v1.core.SpdiAllele.seq_id",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="position",
+            full_name="org.phenopackets.schema.v1.core.SpdiAllele.position",
+            index=2,
+            number=3,
+            type=5,
+            cpp_type=1,
+            label=1,
+            has_default_value=False,
+            default_value=0,
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="deleted_sequence",
+            full_name="org.phenopackets.schema.v1.core.SpdiAllele.deleted_sequence",
+            index=3,
+            number=4,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="inserted_sequence",
+            full_name="org.phenopackets.schema.v1.core.SpdiAllele.inserted_sequence",
+            index=4,
+            number=5,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=4967,
+    serialized_end=5078,
 )
 
 
 _ISCNALLELE = _descriptor.Descriptor(
-  name='IscnAllele',
-  full_name='org.phenopackets.schema.v1.core.IscnAllele',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='org.phenopackets.schema.v1.core.IscnAllele.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='iscn', full_name='org.phenopackets.schema.v1.core.IscnAllele.iscn', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5080,
-  serialized_end=5118,
+    name="IscnAllele",
+    full_name="org.phenopackets.schema.v1.core.IscnAllele",
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    create_key=_descriptor._internal_create_key,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name="id",
+            full_name="org.phenopackets.schema.v1.core.IscnAllele.id",
+            index=0,
+            number=1,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+        _descriptor.FieldDescriptor(
+            name="iscn",
+            full_name="org.phenopackets.schema.v1.core.IscnAllele.iscn",
+            index=1,
+            number=2,
+            type=9,
+            cpp_type=9,
+            label=1,
+            has_default_value=False,
+            default_value=b"".decode("utf-8"),
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
+        ),
+    ],
+    extensions=[],
+    nested_types=[],
+    enum_types=[],
+    serialized_options=None,
+    is_extendable=False,
+    syntax="proto3",
+    extension_ranges=[],
+    oneofs=[],
+    serialized_start=5080,
+    serialized_end=5118,
 )
 
-_METADATA.fields_by_name['created'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_METADATA.fields_by_name['resources'].message_type = _RESOURCE
-_METADATA.fields_by_name['updates'].message_type = _UPDATE
-_METADATA.fields_by_name['external_references'].message_type = _EXTERNALREFERENCE
-_UPDATE.fields_by_name['timestamp'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_PHENOTYPICFEATURE.fields_by_name['type'].message_type = _ONTOLOGYCLASS
-_PHENOTYPICFEATURE.fields_by_name['severity'].message_type = _ONTOLOGYCLASS
-_PHENOTYPICFEATURE.fields_by_name['modifiers'].message_type = _ONTOLOGYCLASS
-_PHENOTYPICFEATURE.fields_by_name['age_of_onset'].message_type = _AGE
-_PHENOTYPICFEATURE.fields_by_name['age_range_of_onset'].message_type = _AGERANGE
-_PHENOTYPICFEATURE.fields_by_name['class_of_onset'].message_type = _ONTOLOGYCLASS
-_PHENOTYPICFEATURE.fields_by_name['evidence'].message_type = _EVIDENCE
-_PHENOTYPICFEATURE.oneofs_by_name['onset'].fields.append(
-  _PHENOTYPICFEATURE.fields_by_name['age_of_onset'])
-_PHENOTYPICFEATURE.fields_by_name['age_of_onset'].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name['onset']
-_PHENOTYPICFEATURE.oneofs_by_name['onset'].fields.append(
-  _PHENOTYPICFEATURE.fields_by_name['age_range_of_onset'])
-_PHENOTYPICFEATURE.fields_by_name['age_range_of_onset'].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name['onset']
-_PHENOTYPICFEATURE.oneofs_by_name['onset'].fields.append(
-  _PHENOTYPICFEATURE.fields_by_name['class_of_onset'])
-_PHENOTYPICFEATURE.fields_by_name['class_of_onset'].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name['onset']
-_EVIDENCE.fields_by_name['evidence_code'].message_type = _ONTOLOGYCLASS
-_EVIDENCE.fields_by_name['reference'].message_type = _EXTERNALREFERENCE
-_INDIVIDUAL.fields_by_name['date_of_birth'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_INDIVIDUAL.fields_by_name['age_at_collection'].message_type = _AGE
-_INDIVIDUAL.fields_by_name['age_range_at_collection'].message_type = _AGERANGE
-_INDIVIDUAL.fields_by_name['sex'].enum_type = _SEX
-_INDIVIDUAL.fields_by_name['karyotypic_sex'].enum_type = _KARYOTYPICSEX
-_INDIVIDUAL.fields_by_name['taxonomy'].message_type = _ONTOLOGYCLASS
-_INDIVIDUAL.oneofs_by_name['age'].fields.append(
-  _INDIVIDUAL.fields_by_name['age_at_collection'])
-_INDIVIDUAL.fields_by_name['age_at_collection'].containing_oneof = _INDIVIDUAL.oneofs_by_name['age']
-_INDIVIDUAL.oneofs_by_name['age'].fields.append(
-  _INDIVIDUAL.fields_by_name['age_range_at_collection'])
-_INDIVIDUAL.fields_by_name['age_range_at_collection'].containing_oneof = _INDIVIDUAL.oneofs_by_name['age']
-_BIOSAMPLE.fields_by_name['sampled_tissue'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['phenotypic_features'].message_type = _PHENOTYPICFEATURE
-_BIOSAMPLE.fields_by_name['taxonomy'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['age_of_individual_at_collection'].message_type = _AGE
-_BIOSAMPLE.fields_by_name['age_range_of_individual_at_collection'].message_type = _AGERANGE
-_BIOSAMPLE.fields_by_name['histological_diagnosis'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['tumor_progression'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['tumor_grade'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['diagnostic_markers'].message_type = _ONTOLOGYCLASS
-_BIOSAMPLE.fields_by_name['procedure'].message_type = _PROCEDURE
-_BIOSAMPLE.fields_by_name['hts_files'].message_type = _HTSFILE
-_BIOSAMPLE.fields_by_name['variants'].message_type = _VARIANT
-_BIOSAMPLE.oneofs_by_name['individual_age_at_collection'].fields.append(
-  _BIOSAMPLE.fields_by_name['age_of_individual_at_collection'])
-_BIOSAMPLE.fields_by_name['age_of_individual_at_collection'].containing_oneof = _BIOSAMPLE.oneofs_by_name['individual_age_at_collection']
-_BIOSAMPLE.oneofs_by_name['individual_age_at_collection'].fields.append(
-  _BIOSAMPLE.fields_by_name['age_range_of_individual_at_collection'])
-_BIOSAMPLE.fields_by_name['age_range_of_individual_at_collection'].containing_oneof = _BIOSAMPLE.oneofs_by_name['individual_age_at_collection']
-_PROCEDURE.fields_by_name['code'].message_type = _ONTOLOGYCLASS
-_PROCEDURE.fields_by_name['body_site'].message_type = _ONTOLOGYCLASS
-_AGERANGE.fields_by_name['start'].message_type = _AGE
-_AGERANGE.fields_by_name['end'].message_type = _AGE
-_DISEASE.fields_by_name['term'].message_type = _ONTOLOGYCLASS
-_DISEASE.fields_by_name['age_of_onset'].message_type = _AGE
-_DISEASE.fields_by_name['age_range_of_onset'].message_type = _AGERANGE
-_DISEASE.fields_by_name['class_of_onset'].message_type = _ONTOLOGYCLASS
-_DISEASE.fields_by_name['disease_stage'].message_type = _ONTOLOGYCLASS
-_DISEASE.fields_by_name['tnm_finding'].message_type = _ONTOLOGYCLASS
-_DISEASE.oneofs_by_name['onset'].fields.append(
-  _DISEASE.fields_by_name['age_of_onset'])
-_DISEASE.fields_by_name['age_of_onset'].containing_oneof = _DISEASE.oneofs_by_name['onset']
-_DISEASE.oneofs_by_name['onset'].fields.append(
-  _DISEASE.fields_by_name['age_range_of_onset'])
-_DISEASE.fields_by_name['age_range_of_onset'].containing_oneof = _DISEASE.oneofs_by_name['onset']
-_DISEASE.oneofs_by_name['onset'].fields.append(
-  _DISEASE.fields_by_name['class_of_onset'])
-_DISEASE.fields_by_name['class_of_onset'].containing_oneof = _DISEASE.oneofs_by_name['onset']
-_PEDIGREE_PERSON.fields_by_name['sex'].enum_type = _SEX
-_PEDIGREE_PERSON.fields_by_name['affected_status'].enum_type = _PEDIGREE_PERSON_AFFECTEDSTATUS
+_METADATA.fields_by_name[
+    "created"
+].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_METADATA.fields_by_name["resources"].message_type = _RESOURCE
+_METADATA.fields_by_name["updates"].message_type = _UPDATE
+_METADATA.fields_by_name["external_references"].message_type = _EXTERNALREFERENCE
+_UPDATE.fields_by_name[
+    "timestamp"
+].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_PHENOTYPICFEATURE.fields_by_name["type"].message_type = _ONTOLOGYCLASS
+_PHENOTYPICFEATURE.fields_by_name["severity"].message_type = _ONTOLOGYCLASS
+_PHENOTYPICFEATURE.fields_by_name["modifiers"].message_type = _ONTOLOGYCLASS
+_PHENOTYPICFEATURE.fields_by_name["age_of_onset"].message_type = _AGE
+_PHENOTYPICFEATURE.fields_by_name["age_range_of_onset"].message_type = _AGERANGE
+_PHENOTYPICFEATURE.fields_by_name["class_of_onset"].message_type = _ONTOLOGYCLASS
+_PHENOTYPICFEATURE.fields_by_name["evidence"].message_type = _EVIDENCE
+_PHENOTYPICFEATURE.oneofs_by_name["onset"].fields.append(
+    _PHENOTYPICFEATURE.fields_by_name["age_of_onset"]
+)
+_PHENOTYPICFEATURE.fields_by_name[
+    "age_of_onset"
+].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name["onset"]
+_PHENOTYPICFEATURE.oneofs_by_name["onset"].fields.append(
+    _PHENOTYPICFEATURE.fields_by_name["age_range_of_onset"]
+)
+_PHENOTYPICFEATURE.fields_by_name[
+    "age_range_of_onset"
+].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name["onset"]
+_PHENOTYPICFEATURE.oneofs_by_name["onset"].fields.append(
+    _PHENOTYPICFEATURE.fields_by_name["class_of_onset"]
+)
+_PHENOTYPICFEATURE.fields_by_name[
+    "class_of_onset"
+].containing_oneof = _PHENOTYPICFEATURE.oneofs_by_name["onset"]
+_EVIDENCE.fields_by_name["evidence_code"].message_type = _ONTOLOGYCLASS
+_EVIDENCE.fields_by_name["reference"].message_type = _EXTERNALREFERENCE
+_INDIVIDUAL.fields_by_name[
+    "date_of_birth"
+].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_INDIVIDUAL.fields_by_name["age_at_collection"].message_type = _AGE
+_INDIVIDUAL.fields_by_name["age_range_at_collection"].message_type = _AGERANGE
+_INDIVIDUAL.fields_by_name["sex"].enum_type = _SEX
+_INDIVIDUAL.fields_by_name["karyotypic_sex"].enum_type = _KARYOTYPICSEX
+_INDIVIDUAL.fields_by_name["taxonomy"].message_type = _ONTOLOGYCLASS
+_INDIVIDUAL.oneofs_by_name["age"].fields.append(
+    _INDIVIDUAL.fields_by_name["age_at_collection"]
+)
+_INDIVIDUAL.fields_by_name[
+    "age_at_collection"
+].containing_oneof = _INDIVIDUAL.oneofs_by_name["age"]
+_INDIVIDUAL.oneofs_by_name["age"].fields.append(
+    _INDIVIDUAL.fields_by_name["age_range_at_collection"]
+)
+_INDIVIDUAL.fields_by_name[
+    "age_range_at_collection"
+].containing_oneof = _INDIVIDUAL.oneofs_by_name["age"]
+_BIOSAMPLE.fields_by_name["sampled_tissue"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["phenotypic_features"].message_type = _PHENOTYPICFEATURE
+_BIOSAMPLE.fields_by_name["taxonomy"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["age_of_individual_at_collection"].message_type = _AGE
+_BIOSAMPLE.fields_by_name[
+    "age_range_of_individual_at_collection"
+].message_type = _AGERANGE
+_BIOSAMPLE.fields_by_name["histological_diagnosis"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["tumor_progression"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["tumor_grade"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["diagnostic_markers"].message_type = _ONTOLOGYCLASS
+_BIOSAMPLE.fields_by_name["procedure"].message_type = _PROCEDURE
+_BIOSAMPLE.fields_by_name["hts_files"].message_type = _HTSFILE
+_BIOSAMPLE.fields_by_name["variants"].message_type = _VARIANT
+_BIOSAMPLE.oneofs_by_name["individual_age_at_collection"].fields.append(
+    _BIOSAMPLE.fields_by_name["age_of_individual_at_collection"]
+)
+_BIOSAMPLE.fields_by_name[
+    "age_of_individual_at_collection"
+].containing_oneof = _BIOSAMPLE.oneofs_by_name["individual_age_at_collection"]
+_BIOSAMPLE.oneofs_by_name["individual_age_at_collection"].fields.append(
+    _BIOSAMPLE.fields_by_name["age_range_of_individual_at_collection"]
+)
+_BIOSAMPLE.fields_by_name[
+    "age_range_of_individual_at_collection"
+].containing_oneof = _BIOSAMPLE.oneofs_by_name["individual_age_at_collection"]
+_PROCEDURE.fields_by_name["code"].message_type = _ONTOLOGYCLASS
+_PROCEDURE.fields_by_name["body_site"].message_type = _ONTOLOGYCLASS
+_AGERANGE.fields_by_name["start"].message_type = _AGE
+_AGERANGE.fields_by_name["end"].message_type = _AGE
+_DISEASE.fields_by_name["term"].message_type = _ONTOLOGYCLASS
+_DISEASE.fields_by_name["age_of_onset"].message_type = _AGE
+_DISEASE.fields_by_name["age_range_of_onset"].message_type = _AGERANGE
+_DISEASE.fields_by_name["class_of_onset"].message_type = _ONTOLOGYCLASS
+_DISEASE.fields_by_name["disease_stage"].message_type = _ONTOLOGYCLASS
+_DISEASE.fields_by_name["tnm_finding"].message_type = _ONTOLOGYCLASS
+_DISEASE.oneofs_by_name["onset"].fields.append(_DISEASE.fields_by_name["age_of_onset"])
+_DISEASE.fields_by_name["age_of_onset"].containing_oneof = _DISEASE.oneofs_by_name[
+    "onset"
+]
+_DISEASE.oneofs_by_name["onset"].fields.append(
+    _DISEASE.fields_by_name["age_range_of_onset"]
+)
+_DISEASE.fields_by_name[
+    "age_range_of_onset"
+].containing_oneof = _DISEASE.oneofs_by_name["onset"]
+_DISEASE.oneofs_by_name["onset"].fields.append(
+    _DISEASE.fields_by_name["class_of_onset"]
+)
+_DISEASE.fields_by_name["class_of_onset"].containing_oneof = _DISEASE.oneofs_by_name[
+    "onset"
+]
+_PEDIGREE_PERSON.fields_by_name["sex"].enum_type = _SEX
+_PEDIGREE_PERSON.fields_by_name[
+    "affected_status"
+].enum_type = _PEDIGREE_PERSON_AFFECTEDSTATUS
 _PEDIGREE_PERSON.containing_type = _PEDIGREE
 _PEDIGREE_PERSON_AFFECTEDSTATUS.containing_type = _PEDIGREE_PERSON
-_PEDIGREE.fields_by_name['persons'].message_type = _PEDIGREE_PERSON
+_PEDIGREE.fields_by_name["persons"].message_type = _PEDIGREE_PERSON
 _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY.containing_type = _HTSFILE
-_HTSFILE.fields_by_name['hts_format'].enum_type = _HTSFILE_HTSFORMAT
-_HTSFILE.fields_by_name['individual_to_sample_identifiers'].message_type = _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY
+_HTSFILE.fields_by_name["hts_format"].enum_type = _HTSFILE_HTSFORMAT
+_HTSFILE.fields_by_name[
+    "individual_to_sample_identifiers"
+].message_type = _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY
 _HTSFILE_HTSFORMAT.containing_type = _HTSFILE
-_VARIANT.fields_by_name['hgvs_allele'].message_type = _HGVSALLELE
-_VARIANT.fields_by_name['vcf_allele'].message_type = _VCFALLELE
-_VARIANT.fields_by_name['spdi_allele'].message_type = _SPDIALLELE
-_VARIANT.fields_by_name['iscn_allele'].message_type = _ISCNALLELE
-_VARIANT.fields_by_name['zygosity'].message_type = _ONTOLOGYCLASS
-_VARIANT.oneofs_by_name['allele'].fields.append(
-  _VARIANT.fields_by_name['hgvs_allele'])
-_VARIANT.fields_by_name['hgvs_allele'].containing_oneof = _VARIANT.oneofs_by_name['allele']
-_VARIANT.oneofs_by_name['allele'].fields.append(
-  _VARIANT.fields_by_name['vcf_allele'])
-_VARIANT.fields_by_name['vcf_allele'].containing_oneof = _VARIANT.oneofs_by_name['allele']
-_VARIANT.oneofs_by_name['allele'].fields.append(
-  _VARIANT.fields_by_name['spdi_allele'])
-_VARIANT.fields_by_name['spdi_allele'].containing_oneof = _VARIANT.oneofs_by_name['allele']
-_VARIANT.oneofs_by_name['allele'].fields.append(
-  _VARIANT.fields_by_name['iscn_allele'])
-_VARIANT.fields_by_name['iscn_allele'].containing_oneof = _VARIANT.oneofs_by_name['allele']
-DESCRIPTOR.message_types_by_name['MetaData'] = _METADATA
-DESCRIPTOR.message_types_by_name['Update'] = _UPDATE
-DESCRIPTOR.message_types_by_name['Resource'] = _RESOURCE
-DESCRIPTOR.message_types_by_name['OntologyClass'] = _ONTOLOGYCLASS
-DESCRIPTOR.message_types_by_name['PhenotypicFeature'] = _PHENOTYPICFEATURE
-DESCRIPTOR.message_types_by_name['Evidence'] = _EVIDENCE
-DESCRIPTOR.message_types_by_name['ExternalReference'] = _EXTERNALREFERENCE
-DESCRIPTOR.message_types_by_name['Individual'] = _INDIVIDUAL
-DESCRIPTOR.message_types_by_name['Biosample'] = _BIOSAMPLE
-DESCRIPTOR.message_types_by_name['Procedure'] = _PROCEDURE
-DESCRIPTOR.message_types_by_name['Age'] = _AGE
-DESCRIPTOR.message_types_by_name['AgeRange'] = _AGERANGE
-DESCRIPTOR.message_types_by_name['Disease'] = _DISEASE
-DESCRIPTOR.message_types_by_name['Pedigree'] = _PEDIGREE
-DESCRIPTOR.message_types_by_name['HtsFile'] = _HTSFILE
-DESCRIPTOR.message_types_by_name['Gene'] = _GENE
-DESCRIPTOR.message_types_by_name['Variant'] = _VARIANT
-DESCRIPTOR.message_types_by_name['HgvsAllele'] = _HGVSALLELE
-DESCRIPTOR.message_types_by_name['VcfAllele'] = _VCFALLELE
-DESCRIPTOR.message_types_by_name['SpdiAllele'] = _SPDIALLELE
-DESCRIPTOR.message_types_by_name['IscnAllele'] = _ISCNALLELE
-DESCRIPTOR.enum_types_by_name['Sex'] = _SEX
-DESCRIPTOR.enum_types_by_name['KaryotypicSex'] = _KARYOTYPICSEX
+_VARIANT.fields_by_name["hgvs_allele"].message_type = _HGVSALLELE
+_VARIANT.fields_by_name["vcf_allele"].message_type = _VCFALLELE
+_VARIANT.fields_by_name["spdi_allele"].message_type = _SPDIALLELE
+_VARIANT.fields_by_name["iscn_allele"].message_type = _ISCNALLELE
+_VARIANT.fields_by_name["zygosity"].message_type = _ONTOLOGYCLASS
+_VARIANT.oneofs_by_name["allele"].fields.append(_VARIANT.fields_by_name["hgvs_allele"])
+_VARIANT.fields_by_name["hgvs_allele"].containing_oneof = _VARIANT.oneofs_by_name[
+    "allele"
+]
+_VARIANT.oneofs_by_name["allele"].fields.append(_VARIANT.fields_by_name["vcf_allele"])
+_VARIANT.fields_by_name["vcf_allele"].containing_oneof = _VARIANT.oneofs_by_name[
+    "allele"
+]
+_VARIANT.oneofs_by_name["allele"].fields.append(_VARIANT.fields_by_name["spdi_allele"])
+_VARIANT.fields_by_name["spdi_allele"].containing_oneof = _VARIANT.oneofs_by_name[
+    "allele"
+]
+_VARIANT.oneofs_by_name["allele"].fields.append(_VARIANT.fields_by_name["iscn_allele"])
+_VARIANT.fields_by_name["iscn_allele"].containing_oneof = _VARIANT.oneofs_by_name[
+    "allele"
+]
+DESCRIPTOR.message_types_by_name["MetaData"] = _METADATA
+DESCRIPTOR.message_types_by_name["Update"] = _UPDATE
+DESCRIPTOR.message_types_by_name["Resource"] = _RESOURCE
+DESCRIPTOR.message_types_by_name["OntologyClass"] = _ONTOLOGYCLASS
+DESCRIPTOR.message_types_by_name["PhenotypicFeature"] = _PHENOTYPICFEATURE
+DESCRIPTOR.message_types_by_name["Evidence"] = _EVIDENCE
+DESCRIPTOR.message_types_by_name["ExternalReference"] = _EXTERNALREFERENCE
+DESCRIPTOR.message_types_by_name["Individual"] = _INDIVIDUAL
+DESCRIPTOR.message_types_by_name["Biosample"] = _BIOSAMPLE
+DESCRIPTOR.message_types_by_name["Procedure"] = _PROCEDURE
+DESCRIPTOR.message_types_by_name["Age"] = _AGE
+DESCRIPTOR.message_types_by_name["AgeRange"] = _AGERANGE
+DESCRIPTOR.message_types_by_name["Disease"] = _DISEASE
+DESCRIPTOR.message_types_by_name["Pedigree"] = _PEDIGREE
+DESCRIPTOR.message_types_by_name["HtsFile"] = _HTSFILE
+DESCRIPTOR.message_types_by_name["Gene"] = _GENE
+DESCRIPTOR.message_types_by_name["Variant"] = _VARIANT
+DESCRIPTOR.message_types_by_name["HgvsAllele"] = _HGVSALLELE
+DESCRIPTOR.message_types_by_name["VcfAllele"] = _VCFALLELE
+DESCRIPTOR.message_types_by_name["SpdiAllele"] = _SPDIALLELE
+DESCRIPTOR.message_types_by_name["IscnAllele"] = _ISCNALLELE
+DESCRIPTOR.enum_types_by_name["Sex"] = _SEX
+DESCRIPTOR.enum_types_by_name["KaryotypicSex"] = _KARYOTYPICSEX
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-MetaData = _reflection.GeneratedProtocolMessageType('MetaData', (_message.Message,), {
-  'DESCRIPTOR' : _METADATA,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.MetaData)
-  })
+MetaData = _reflection.GeneratedProtocolMessageType(
+    "MetaData",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _METADATA,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.MetaData)
+    },
+)
 _sym_db.RegisterMessage(MetaData)
 
-Update = _reflection.GeneratedProtocolMessageType('Update', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Update)
-  })
+Update = _reflection.GeneratedProtocolMessageType(
+    "Update",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _UPDATE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Update)
+    },
+)
 _sym_db.RegisterMessage(Update)
 
-Resource = _reflection.GeneratedProtocolMessageType('Resource', (_message.Message,), {
-  'DESCRIPTOR' : _RESOURCE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Resource)
-  })
+Resource = _reflection.GeneratedProtocolMessageType(
+    "Resource",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _RESOURCE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Resource)
+    },
+)
 _sym_db.RegisterMessage(Resource)
 
-OntologyClass = _reflection.GeneratedProtocolMessageType('OntologyClass', (_message.Message,), {
-  'DESCRIPTOR' : _ONTOLOGYCLASS,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.OntologyClass)
-  })
+OntologyClass = _reflection.GeneratedProtocolMessageType(
+    "OntologyClass",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _ONTOLOGYCLASS,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.OntologyClass)
+    },
+)
 _sym_db.RegisterMessage(OntologyClass)
 
-PhenotypicFeature = _reflection.GeneratedProtocolMessageType('PhenotypicFeature', (_message.Message,), {
-  'DESCRIPTOR' : _PHENOTYPICFEATURE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.PhenotypicFeature)
-  })
+PhenotypicFeature = _reflection.GeneratedProtocolMessageType(
+    "PhenotypicFeature",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _PHENOTYPICFEATURE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.PhenotypicFeature)
+    },
+)
 _sym_db.RegisterMessage(PhenotypicFeature)
 
-Evidence = _reflection.GeneratedProtocolMessageType('Evidence', (_message.Message,), {
-  'DESCRIPTOR' : _EVIDENCE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Evidence)
-  })
+Evidence = _reflection.GeneratedProtocolMessageType(
+    "Evidence",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _EVIDENCE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Evidence)
+    },
+)
 _sym_db.RegisterMessage(Evidence)
 
-ExternalReference = _reflection.GeneratedProtocolMessageType('ExternalReference', (_message.Message,), {
-  'DESCRIPTOR' : _EXTERNALREFERENCE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.ExternalReference)
-  })
+ExternalReference = _reflection.GeneratedProtocolMessageType(
+    "ExternalReference",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _EXTERNALREFERENCE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.ExternalReference)
+    },
+)
 _sym_db.RegisterMessage(ExternalReference)
 
-Individual = _reflection.GeneratedProtocolMessageType('Individual', (_message.Message,), {
-  'DESCRIPTOR' : _INDIVIDUAL,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Individual)
-  })
+Individual = _reflection.GeneratedProtocolMessageType(
+    "Individual",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _INDIVIDUAL,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Individual)
+    },
+)
 _sym_db.RegisterMessage(Individual)
 
-Biosample = _reflection.GeneratedProtocolMessageType('Biosample', (_message.Message,), {
-  'DESCRIPTOR' : _BIOSAMPLE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Biosample)
-  })
+Biosample = _reflection.GeneratedProtocolMessageType(
+    "Biosample",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _BIOSAMPLE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Biosample)
+    },
+)
 _sym_db.RegisterMessage(Biosample)
 
-Procedure = _reflection.GeneratedProtocolMessageType('Procedure', (_message.Message,), {
-  'DESCRIPTOR' : _PROCEDURE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Procedure)
-  })
+Procedure = _reflection.GeneratedProtocolMessageType(
+    "Procedure",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _PROCEDURE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Procedure)
+    },
+)
 _sym_db.RegisterMessage(Procedure)
 
-Age = _reflection.GeneratedProtocolMessageType('Age', (_message.Message,), {
-  'DESCRIPTOR' : _AGE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Age)
-  })
+Age = _reflection.GeneratedProtocolMessageType(
+    "Age",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _AGE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Age)
+    },
+)
 _sym_db.RegisterMessage(Age)
 
-AgeRange = _reflection.GeneratedProtocolMessageType('AgeRange', (_message.Message,), {
-  'DESCRIPTOR' : _AGERANGE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.AgeRange)
-  })
+AgeRange = _reflection.GeneratedProtocolMessageType(
+    "AgeRange",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _AGERANGE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.AgeRange)
+    },
+)
 _sym_db.RegisterMessage(AgeRange)
 
-Disease = _reflection.GeneratedProtocolMessageType('Disease', (_message.Message,), {
-  'DESCRIPTOR' : _DISEASE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Disease)
-  })
+Disease = _reflection.GeneratedProtocolMessageType(
+    "Disease",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _DISEASE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Disease)
+    },
+)
 _sym_db.RegisterMessage(Disease)
 
-Pedigree = _reflection.GeneratedProtocolMessageType('Pedigree', (_message.Message,), {
-
-  'Person' : _reflection.GeneratedProtocolMessageType('Person', (_message.Message,), {
-    'DESCRIPTOR' : _PEDIGREE_PERSON,
-    '__module__' : 'base_pb2'
-    # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Pedigree.Person)
-    })
-  ,
-  'DESCRIPTOR' : _PEDIGREE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Pedigree)
-  })
+Pedigree = _reflection.GeneratedProtocolMessageType(
+    "Pedigree",
+    (_message.Message,),
+    {
+        "Person": _reflection.GeneratedProtocolMessageType(
+            "Person",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _PEDIGREE_PERSON,
+                "__module__": "base_pb2"
+                # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Pedigree.Person)
+            },
+        ),
+        "DESCRIPTOR": _PEDIGREE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Pedigree)
+    },
+)
 _sym_db.RegisterMessage(Pedigree)
 _sym_db.RegisterMessage(Pedigree.Person)
 
-HtsFile = _reflection.GeneratedProtocolMessageType('HtsFile', (_message.Message,), {
-
-  'IndividualToSampleIdentifiersEntry' : _reflection.GeneratedProtocolMessageType('IndividualToSampleIdentifiersEntry', (_message.Message,), {
-    'DESCRIPTOR' : _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY,
-    '__module__' : 'base_pb2'
-    # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry)
-    })
-  ,
-  'DESCRIPTOR' : _HTSFILE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HtsFile)
-  })
+HtsFile = _reflection.GeneratedProtocolMessageType(
+    "HtsFile",
+    (_message.Message,),
+    {
+        "IndividualToSampleIdentifiersEntry": _reflection.GeneratedProtocolMessageType(
+            "IndividualToSampleIdentifiersEntry",
+            (_message.Message,),
+            {
+                "DESCRIPTOR": _HTSFILE_INDIVIDUALTOSAMPLEIDENTIFIERSENTRY,
+                "__module__": "base_pb2"
+                # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HtsFile.IndividualToSampleIdentifiersEntry)
+            },
+        ),
+        "DESCRIPTOR": _HTSFILE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HtsFile)
+    },
+)
 _sym_db.RegisterMessage(HtsFile)
 _sym_db.RegisterMessage(HtsFile.IndividualToSampleIdentifiersEntry)
 
-Gene = _reflection.GeneratedProtocolMessageType('Gene', (_message.Message,), {
-  'DESCRIPTOR' : _GENE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Gene)
-  })
+Gene = _reflection.GeneratedProtocolMessageType(
+    "Gene",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _GENE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Gene)
+    },
+)
 _sym_db.RegisterMessage(Gene)
 
-Variant = _reflection.GeneratedProtocolMessageType('Variant', (_message.Message,), {
-  'DESCRIPTOR' : _VARIANT,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Variant)
-  })
+Variant = _reflection.GeneratedProtocolMessageType(
+    "Variant",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _VARIANT,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.Variant)
+    },
+)
 _sym_db.RegisterMessage(Variant)
 
-HgvsAllele = _reflection.GeneratedProtocolMessageType('HgvsAllele', (_message.Message,), {
-  'DESCRIPTOR' : _HGVSALLELE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HgvsAllele)
-  })
+HgvsAllele = _reflection.GeneratedProtocolMessageType(
+    "HgvsAllele",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _HGVSALLELE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.HgvsAllele)
+    },
+)
 _sym_db.RegisterMessage(HgvsAllele)
 
-VcfAllele = _reflection.GeneratedProtocolMessageType('VcfAllele', (_message.Message,), {
-  'DESCRIPTOR' : _VCFALLELE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.VcfAllele)
-  })
+VcfAllele = _reflection.GeneratedProtocolMessageType(
+    "VcfAllele",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _VCFALLELE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.VcfAllele)
+    },
+)
 _sym_db.RegisterMessage(VcfAllele)
 
-SpdiAllele = _reflection.GeneratedProtocolMessageType('SpdiAllele', (_message.Message,), {
-  'DESCRIPTOR' : _SPDIALLELE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.SpdiAllele)
-  })
+SpdiAllele = _reflection.GeneratedProtocolMessageType(
+    "SpdiAllele",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _SPDIALLELE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.SpdiAllele)
+    },
+)
 _sym_db.RegisterMessage(SpdiAllele)
 
-IscnAllele = _reflection.GeneratedProtocolMessageType('IscnAllele', (_message.Message,), {
-  'DESCRIPTOR' : _ISCNALLELE,
-  '__module__' : 'base_pb2'
-  # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.IscnAllele)
-  })
+IscnAllele = _reflection.GeneratedProtocolMessageType(
+    "IscnAllele",
+    (_message.Message,),
+    {
+        "DESCRIPTOR": _ISCNALLELE,
+        "__module__": "base_pb2"
+        # @@protoc_insertion_point(class_scope:org.phenopackets.schema.v1.core.IscnAllele)
+    },
+)
 _sym_db.RegisterMessage(IscnAllele)
 
 
