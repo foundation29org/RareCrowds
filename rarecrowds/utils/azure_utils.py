@@ -2,7 +2,9 @@ import os
 
 from azure.storage.blob import BlobServiceClient
 
-ACCOUNT_URL = "https://publiccasesv1.blob.core.windows.net"
+from rarecrowds.conf_utils import get_config_value
+
+ACCOUNT_URL = get_config_value("AZURE", "ACCOUNT_URL")
 ALLOWED_CONTAINERS = set(
     [
         "cipriani-2020",
