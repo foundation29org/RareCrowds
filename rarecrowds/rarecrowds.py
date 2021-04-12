@@ -6,7 +6,7 @@ from google.protobuf.json_format import Parse, MessageToJson
 import pandas as pd
 
 from rarecrowds.phenopackets_pb2 import Phenopacket
-from rarecrowds.utils.azure_utils import download_data
+from rarecrowds.utils.azure_utils import download_data, ALLOWED_CONTAINERS
 
 DATA_PATH = "rarecrowds_data"
 
@@ -59,6 +59,9 @@ class PhenotypicDatabase:
             self.load_from_folder(os.path.join(data_path, dataset))
         except Exception as e:
             print(e)
+    
+    def get_available_datasets(self) -> List[str]:
+        return list(ALLOWED_CONTAINERS)
 
     def add_hpo_symptoms(self, list_of_dicts: List[Dict]) -> None:
         for dictionary in list_of_dicts:
@@ -66,3 +69,4 @@ class PhenotypicDatabase:
             for phenFeature in dictionary["phenotypicFeatures"]:
                 hpo_terms.append(phenFeature["type"]["id"])
             dictionary["hpo terms"] = hpo_terms
+            

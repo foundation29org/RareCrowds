@@ -1,10 +1,10 @@
 import os
+from tqdm import tqdm
 
 from azure.storage.blob import BlobServiceClient
 
 from rarecrowds.conf_utils import get_config_value
 
-ACCOUNT_URL = get_config_value("AZURE", "ACCOUNT_URL")
 ALLOWED_CONTAINERS = set(
     [
         "cipriani-2020",
@@ -18,17 +18,20 @@ ALLOWED_CONTAINERS = set(
 
 
 def download_data(dataset: str, data_path: str) -> None:
-    blob_service = BlobServiceClient(account_url=ACCOUNT_URL)
     if dataset not in ALLOWED_CONTAINERS:
         raise Exception(
             f"Invalid dataset type: {dataset} \nOnly allowed datasets are {ALLOWED_CONTAINERS}"
         )
     try:
+        blob_service = BlobServiceClient(
+            account_url=get_config_value("AZURE", "ACCOUNT_URL")
+        )
         container_client = blob_service.get_container_client(dataset)
         blob_list = container_client.list_blobs()
         if not os.path.exists(os.path.join(data_path, dataset)):
             os.makedirs(os.path.join(data_path, dataset))
-        for blob in blob_list:
+        print(f"Starting download of {dataset}")
+        for blob in tqdm(blob_list):
             blob_client = container_client.get_blob_client(blob)
             with open(
                 os.path.join(data_path, dataset, blob["name"]), "wb"
