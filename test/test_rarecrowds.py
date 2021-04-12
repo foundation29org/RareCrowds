@@ -1,3 +1,6 @@
+import glob
+import os
+
 from rarecrowds.phenopackets_pb2 import Phenopacket
 from rarecrowds.rarecrowds import PhenotypicDatabase
 
@@ -64,3 +67,10 @@ def test_load_from_folder():
     )
     assert phenopacket.genes[0].symbol == "CNGB3"
     assert phenopacket.diseases[0].term.label == "Achromatopsia"
+
+
+def test_load_default():
+    testDB = PhenotypicDatabase()
+    testDB.load_default("kleyner-2016")
+    assert os.path.exists("rarecrowds_data/kleyner-2016")
+    assert len(glob.glob("rarecrowds_data/kleyner-2016/*.json")) == 1
