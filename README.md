@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/foundation29org/RareCrowds)](https://travis-ci.com/foundation29org/RareCrowds)
+[![Build Status](https://travis-ci.com/foundation29org/RareCrowds.svg?branch=main)](https://travis-ci.com/foundation29org/RareCrowds)
 
 # RareCrowds
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
