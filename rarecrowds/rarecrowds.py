@@ -7,6 +7,7 @@ import pandas as pd
 
 from rarecrowds.phenopackets_pb2 import Phenopacket
 from rarecrowds.utils.azure_utils import download_data, ALLOWED_CONTAINERS
+from rarecrowds.utils.patient_sim import PatientSampler
 
 DATA_PATH = "rarecrowds_data"
 
@@ -22,6 +23,7 @@ class PhenotypicDatabase:
             "subject.id",
             "hpo terms",
         ]
+        self.patient_sampler = PatientSampler()
 
     def add_phenopacket(self, phenopacket: Phenopacket) -> None:
         self.db[phenopacket.id] = phenopacket
@@ -49,7 +51,12 @@ class PhenotypicDatabase:
         self, include_hpo_terms: bool = True
     ) -> pd.core.frame.DataFrame:
         df = pd.json_normalize(self.generate_list_of_dicts(include_hpo_terms))
-        return df[self.fields]
+        fields = []
+        df_columns = set(df.columns)
+        for field in self.fields:
+            if field in df_columns:
+                fields.append(field)
+        return df[fields]
 
     def load_default(self, dataset: str, data_path: str = DATA_PATH) -> None:
         if not os.path.exists(os.path.join(data_path, dataset)):
@@ -63,10 +70,29 @@ class PhenotypicDatabase:
     def get_available_datasets(self) -> List[str]:
         return list(ALLOWED_CONTAINERS)
 
+    def get_available_datasets(self) -> List[str]:
+        return list(ALLOWED_CONTAINERS)
+
     def add_hpo_symptoms(self, list_of_dicts: List[Dict]) -> None:
         for dictionary in list_of_dicts:
             hpo_terms = []
-            for phenFeature in dictionary["phenotypicFeatures"]:
-                hpo_terms.append(phenFeature["type"]["id"])
+            if "phenotypicFeatures" in dictionary.keys():
+                for phenFeature in dictionary["phenotypicFeatures"]:
+                    hpo_terms.append(phenFeature["type"]["id"])
             dictionary["hpo terms"] = hpo_terms
-            
+
+    def load_simulated_data(self, **kwargs):
+        patient_params = kwargs.get("patient_params", "default")
+        num_patients = kwargs.get("num_patients", 20)
+        try:
+            simulations = self.patient_sampler.sample(
+                patient_params=patient_params, N=num_patients
+            )
+            phenopackets = self.patient_sampler.convert_simulations_to_phenopackets(
+                simulations, num_patients=num_patients
+            )
+            for phen_dict in phenopackets:
+                phenopacket = Parse(message=Phenopacket(), text=json.dumps(phen_dict))
+                self.add_phenopacket(phenopacket)
+        except Exception as e:
+            print(e)
