@@ -9,8 +9,8 @@ Package to serve public data from rare disease patients as found in publications
 ## Usage
 To get an instance of a `PhenotypicDatabase`:
 ```python
-from rarecrowds import rarecrowds
-db = PhenotypicDatabase()
+from rarecrowds import rarecrowds as rc
+db = rc.PhenotypicDatabase()
 ```
 
 To check what datasets are available and download them for usage:
