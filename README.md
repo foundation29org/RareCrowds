@@ -198,6 +198,7 @@ These are the options for patient simulation parameters
     "omit_frequency": False,
 }
 '''
+```
 
 ### PhenotypicComparison
 Comparing phenotypic profiles is often tricky. Venn diagrams are helpful, but often fall short in cases with complicated symptom relations. This module offers a detailed view of the overlap between, at most, 2 phenotypic profiles. It plots the HPO ontology graph with nodes color coded marking the common nodes and the nodes belonging to each profile. The plots use Plotly, so an interactivity-enabled viewer is recommended (most notebooks support this).
@@ -226,7 +227,7 @@ PhenotypicComparison.plot(
 <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/profile_comparison.png" width="800">
 
 ### PhenotypicDatabase
-Finally, you may use the PhenotypicDatabase module to pull data from public sources. Currently, there are the supported sources:
+Finally, you may use the PhenotypicDatabase module to pull data from public sources. Currently, these are the supported sources:
 
 | Publication | Edited | Source | N. cases |
 |-------------|--------|--------|----------|
@@ -240,6 +241,8 @@ Finally, you may use the PhenotypicDatabase module to pull data from public sour
 | [Tomar, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/) | No | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/bin/41431_2019_412_MOESM2_ESM.docx) | 50 |
 | [Ebiki, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/) | No | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/bin/yam-62-244-s002.pdf) | 20 |
 | [ClinVar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz) | Subsampled | [ClinVar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz) | 68153 |
+
+Any publication or algorithm stemming from data from the sources above **MUST** cite the source properly. It is the onus of the publisher to comply with this.
 
 To get an instance of the `PhenotypicDatabase`:
 ```python
