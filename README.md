@@ -13,13 +13,13 @@ from rarecrowds import rarecrowds as rc
 db = rc.PhenotypicDatabase()
 ```
 
-To check what datasets are available and download them for usage:
+The PhenotypicDatabase instance manages your local database. You may add data to it by downloading available data or by generating it locally (via simulations or a local push). Available datasets are not in your local database until you explicitly download them. To check what datasets are available and load them for later usage run:
 ```python
 datasets = db.get_available_datasets()
-db.load_default(some_dataset)
+db.load_default('some_dataset')
 ```
 
-To use our sampler to sample diseases for patients:
+You may also simulate patients from different diseases. You can configure the imprecision and noise levels used to sample patient symptoms:
 ```python
 '''
 These are the options for patient simulation parameters
@@ -53,7 +53,7 @@ These are the options for patient simulation parameters
 db.load_simulated_data(patient_params="ideal", num_patients=20)
 ```
 
-To get a dataframe of the data in the database:
+In order to extract data from your database, you can get either a pandas dataframe or a list of dictionaries. To get a dataframe of the data in the database:
 ```python
 df = db.generate_dataframe()
 ```
