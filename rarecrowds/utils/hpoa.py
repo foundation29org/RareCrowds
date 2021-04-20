@@ -13,7 +13,7 @@ class Hpoa:
         If filepath is not provided, load pickle data.
         Alternatively, load HPOA data file (tsv).
         """
-        self._data_path = os.path.join(os.path.dirname(__file__), "_data")
+        self._data_path = os.path.join(os.path.dirname(__file__), "resources")
         filepath = os.path.join(self._data_path, "phenotype.hpoa.pkl")
         if reload:
             try:

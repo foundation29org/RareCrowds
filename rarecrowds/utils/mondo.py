@@ -12,22 +12,23 @@ class Mondo(OntoGraph):
         self.mapping = {}
         self.xrefs = {}
         self.purl = "http://purl.obolibrary.org/obo/mondo.obo"
-        _data_path = os.path.join(os.path.dirname(__file__), "_data")
-        _pkl_path = os.path.join(_data_path, "mondo.pkl")
+        _data_path = os.path.join(os.path.dirname(__file__), "resources")
+        _pkl_path = os.path.join(_data_path, "mondo.obo.pkl")
         if update:
-            filename = self.purl
             if filename:
-                print(f"Warning! 'filename' is repalced by '{self.purl}'")
+                print(f"Warning! 'filename' is replaced by '{self.purl}'")
+            filename = self.purl
         elif not filename:
             filename = _pkl_path
         super().__init__(filename)
         if update:
-            super().save(_pkl_path)
+            self.save(_pkl_path)
 
     def _load_graph(self, filename):
         with open(filename, "rb") as fp:
             meta = pickle.load(fp)
-        self.mapping = meta["alias"]
+        self.mapping = meta["mapping"]
+        self.xrefs = meta["xrefs"]
         return meta["graph"]
 
     def _add_node(self, G, id, term):
@@ -62,6 +63,7 @@ class Mondo(OntoGraph):
         return items
 
     def save(self, path):
-        meta = {"graph": self.Graph, "alias": self.mapping}
+        """Save current class data as a dict."""
+        meta = {"graph": self.Graph, "mapping": self.mapping, "xrefs": self.xrefs}
         with open(path, "wb") as fp:
             pickle.dump(meta, fp)
