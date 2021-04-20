@@ -212,7 +212,7 @@ PhenotypicComparison.plot(
         'id': patients['ORPHA:324']['id'],
         'phenotype': patients['ORPHA:324']['phenotype']})
 ```
-![Showing a phenotypic profile](https://github.com/foundation29org/RareCrowds/blob/main/resources/profile.png)
+<img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/profile.png" width="800">
 
 If two phenotypic profiles are passed as argument, it will plot a comparison:
 ```python
@@ -223,7 +223,7 @@ PhenotypicComparison.plot(
         'id': patients['ORPHA:324']['id'],
         'phenotype': patients['ORPHA:324']['phenotype']})
 ```
-![Comparing two phenotypic profiles](https://github.com/foundation29org/RareCrowds/blob/main/resources/profile_comparison.png)
+<img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/profile_comparison.png" width="800">
 
 ### PhenotypicDatabase
 Finally, you may use the PhenotypicDatabase module to pull data from public sources. Currently, there are the supported sources:
@@ -266,18 +266,18 @@ data = db.generate_list_of_dicts()
 # References and attributions
 The following references need to be added:
 ## Orphanet
-- **Reference:** Landrum MJ et al. ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res. 2018 Jan 4. PubMed PMID: 29165669
+- **Reference:** Pavan S et al. Clinical Practice Guidelines for Rare Diseases: The Orphanet Database. PLoS One. 2017 Jan 18;12(1):e0170365. doi: 10.1371/journal.pone.0170365. PMID: 28099516; PMCID: PMC5242437.
 - **Link:** [https://www.orpha.net/](https://www.orpha.net/)
-- **Logo:** ![Orphanet](https://github.com/foundation29org/RareCrowds/blob/main/resources/orphanet.jpg)
+- **Logo:** <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/orphanet.jpg" width="150">
 ## HPO
 - **Reference:** Sebastian Köhler et al. The Human Phenotype Ontology in 2021, Nucleic Acids Research, Volume 49, Issue D1, 8 January 2021, Pages D1207–D1217, https://doi.org/10.1093/nar/gkaa1043
 - **Link:** [https://hpo.jax.org/app/](https://hpo.jax.org/app/)
-- **Logo:** ![HPO](https://github.com/foundation29org/RareCrowds/blob/main/resources/HPO.png)
+- **Logo:** <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/HPO.png" width="150">
 ## ClinVar
 - **Reference:** Landrum MJ, Lee JM, Benson M, Brown GR, Chao C, Chitipiralla S, Gu B, Hart J, Hoffman D, Jang W, Karapetyan K, Katz K, Liu C, Maddipatla Z, Malheiro A, McDaniel K, Ovetsky M, Riley G, Zhou G, Holmes JB, Kattman BL, Maglott DR. ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res. 2018 Jan 4. PubMed PMID: 29165669
 - **Link:** [https://www.ncbi.nlm.nih.gov/clinvar/](https://www.ncbi.nlm.nih.gov/clinvar/)
-- **Logo:** ![ClinVar](https://github.com/foundation29org/RareCrowds/blob/main/resources/clinvar.jpg)
-- **Powered by NCBI:** ![ClinVar](https://github.com/foundation29org/RareCrowds/blob/main/resources/NCBI_powered.png)
+- **Logo:** <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/clinvar.jpg" width="150">
+- **Powered by NCBI:** <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/NCBI_powered.png" width="150">
 ## Other sources
 - [Zemojtel, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639)
 - [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long)
