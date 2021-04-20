@@ -102,7 +102,9 @@ class PatientSampler:
                 phenopacket["phenotypicFeatures"] = []
                 if data["cohort"][i]["phenotype"]:
                     for feature in data["cohort"][i]["phenotype"]:
-                        phenopacket["phenotypicFeatures"].append({"type": {"id": feature}})
+                        phenopacket["phenotypicFeatures"].append(
+                            {"type": {"id": feature}}
+                        )
                 phenopacket["metaData"] = {}
                 phenopacket["metaData"]["submittedBy"] = "patient sampler"
                 phenopacket["metaData"]["resources"] = []
@@ -366,4 +368,3 @@ class Onset:
             return None, None
         else:
             raise ValueError(f"Unknown age interval '{age}'")
-

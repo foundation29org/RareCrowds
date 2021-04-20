@@ -66,7 +66,7 @@ class PhenotypicDatabase:
             self.load_from_folder(os.path.join(data_path, dataset))
         except Exception as e:
             print(e)
-    
+
     def get_available_datasets(self) -> List[str]:
         return list(ALLOWED_CONTAINERS)
 

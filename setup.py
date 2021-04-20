@@ -8,11 +8,14 @@ with open("requirements.txt") as f:
 
 setup(
     name="rarecrowds",
-    version="0.0.1",
+    version="0.0.2",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: POSIX",
     ],
     packages=find_packages(exclude=["test"]),
     install_requires=requirements,
+    package_dir={'rarecrowds': 'rarecrowds'},
+    package_data={'rarecrowds': ['resources/*', 'utils/resources/*']},
+    include_package_data=True,
 )
