@@ -243,8 +243,8 @@ Finally, you may use the PhenotypicDatabase module to pull data from public sour
 
 To get an instance of the `PhenotypicDatabase`:
 ```python
-from rarecrowds import rarecrowds
-db = rarecrowds.PhenotypicDatabase()
+from rarecrowds import PhenotypicDatabase
+db = PhenotypicDatabase()
 ```
 
 The PhenotypicDatabase instance manages your local database. You may add data to it by downloading available data or by generating it locally (via simulations or a local push). Available datasets are not in your local database until you explicitly download them. To check what datasets are available and load them for later usage run:
