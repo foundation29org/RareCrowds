@@ -68,7 +68,8 @@ class PhenotypicDatabase:
             print(e)
 
     def get_available_datasets(self) -> List[str]:
-        return list(ALLOWED_CONTAINERS)
+        '''Get dictionary of available data sources.'''
+        return ALLOWED_CONTAINERS
 
     def add_hpo_symptoms(self, list_of_dicts: List[Dict]) -> None:
         for dictionary in list_of_dicts:
