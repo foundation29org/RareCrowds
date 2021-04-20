@@ -9,8 +9,8 @@ Package to serve public data from rare disease patients as found in publications
 ## Usage
 To get an instance of a `PhenotypicDatabase`:
 ```python
-from rarecrowds import rarecrowds
-db = PhenotypicDatabase()
+from rarecrowds import rarecrowds as rc
+db = rc.PhenotypicDatabase()
 ```
 
 To check what datasets are available and download them for usage:
@@ -62,17 +62,3 @@ To get a list of dictionaries of the data in the database:
 ```python
 data = db.generate_list_of_dicts()
 ```
-
-
-## TODOs:
-
-Ideally this repository is converted into a module that can be installed through pip/conda.
-
-For this to happen this needs to be done:
-- Define a common data format: Phenopacket.
-- Transform the available data into lists of Phenopackets.
-- Define structure to serve available data (ideally with a similar interface to HuggingFace).
-- Create all other required files (like setup.py)
-- Later on:
-  - Improve data ingestion pipelines.
-  - Make sure that no patient is included twice -> identity!
