@@ -264,6 +264,24 @@ data = db.generate_list_of_dicts()
 ```
 
 # References and attributions
-The following references and attributions need to be added:
-
-TODO: Add them
+The following references need to be added:
+## Orphanet
+- **Reference:** Landrum MJ et al. ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res. 2018 Jan 4. PubMed PMID: 29165669
+- **Link:** [https://www.orpha.net/](https://www.orpha.net/)
+- **Logo:** ![Orphanet](https://github.com/foundation29org/RareCrowds/blob/main/resources/orphanet.jpg)
+## HPO
+- **Reference:** Sebastian Köhler et al. The Human Phenotype Ontology in 2021, Nucleic Acids Research, Volume 49, Issue D1, 8 January 2021, Pages D1207–D1217, https://doi.org/10.1093/nar/gkaa1043
+- **Link:** [https://hpo.jax.org/app/](https://hpo.jax.org/app/)
+- **Logo:** ![HPO](https://github.com/foundation29org/RareCrowds/blob/main/resources/HPO.png)
+## ClinVar
+- **Reference:** Landrum MJ, Lee JM, Benson M, Brown GR, Chao C, Chitipiralla S, Gu B, Hart J, Hoffman D, Jang W, Karapetyan K, Katz K, Liu C, Maddipatla Z, Malheiro A, McDaniel K, Ovetsky M, Riley G, Zhou G, Holmes JB, Kattman BL, Maglott DR. ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res. 2018 Jan 4. PubMed PMID: 29165669
+- **Link:** [https://www.ncbi.nlm.nih.gov/clinvar/](https://www.ncbi.nlm.nih.gov/clinvar/)
+- **Logo:** ![ClinVar](https://github.com/foundation29org/RareCrowds/blob/main/resources/clinvar.jpg)
+- **Powered by NCBI:** ![ClinVar](https://github.com/foundation29org/RareCrowds/blob/main/resources/NCBI_powered.png)
+## Other sources
+- [Zemojtel, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639)
+- [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long)
+- [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/)
+- [Tomar, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/)
+- [Ebiki, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/)
+- [Cipriani, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/)
