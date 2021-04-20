@@ -36,20 +36,23 @@ class PhenotypicDatabase:
             print(e)
 
     def load_from_folder(self, folder_path: str) -> None:
+        '''Loads phenopackets from a directory into the database.'''
         for file in os.listdir(folder_path):
             self.add_phenopacket(self.load_from_file(os.path.join(folder_path, file)))
 
     def generate_list_of_dicts(self, include_hpo_terms: bool = True) -> List[Dict]:
+        '''Generates a list of dicts with the data available in the database.'''
         return_list = []
         for k, v in self.db.items():
             return_list.append(json.loads(MessageToJson(v)))
         if include_hpo_terms:
-            self.add_hpo_symptoms(return_list)
+            self._add_hpo_symptoms(return_list)
         return return_list
 
     def generate_dataframe(
         self, include_hpo_terms: bool = True
     ) -> pd.core.frame.DataFrame:
+        '''Generates a Pandas dataframe with the data available in the database.'''
         df = pd.json_normalize(self.generate_list_of_dicts(include_hpo_terms))
         fields = []
         df_columns = set(df.columns)
@@ -71,7 +74,7 @@ class PhenotypicDatabase:
         '''Get dictionary of available data sources.'''
         return ALLOWED_CONTAINERS
 
-    def add_hpo_symptoms(self, list_of_dicts: List[Dict]) -> None:
+    def _add_hpo_symptoms(self, list_of_dicts: List[Dict]) -> None:
         for dictionary in list_of_dicts:
             hpo_terms = []
             if "phenotypicFeatures" in dictionary.keys():
@@ -80,6 +83,7 @@ class PhenotypicDatabase:
             dictionary["hpo terms"] = hpo_terms
 
     def load_simulated_data(self, **kwargs):
+        '''Loads simulated data into the local database.'''
         patient_params = kwargs.get("patient_params", "default")
         num_patients = kwargs.get("num_patients", 20)
         try:
