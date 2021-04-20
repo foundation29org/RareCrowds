@@ -212,8 +212,7 @@ PhenotypicComparison.plot(
         'id': patients['ORPHA:324']['id'],
         'phenotype': patients['ORPHA:324']['phenotype']})
 ```
-
-TODO: add image
+![Showing a phenotypic profile](https://github.com/foundation29org/RareCrowds/resources/profile.png)
 
 If two phenotypic profiles are passed as argument, it will plot a comparison:
 ```python
@@ -224,7 +223,7 @@ PhenotypicComparison.plot(
         'id': patients['ORPHA:324']['id'],
         'phenotype': patients['ORPHA:324']['phenotype']})
 ```
-TODO: add image
+![Comparing two phenotypic profiles](https://github.com/foundation29org/RareCrowds/resources/profile_comparison.png)
 
 ### PhenotypicDatabase
 Finally, you may use the PhenotypicDatabase module to pull data from public sources. Currently, there are the supported sources:
