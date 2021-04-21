@@ -29,7 +29,7 @@ from rarecrowds import DiseaseAnnotations
 dann = DiseaseAnnotations(mode='intersect')
 data = dann.data['ORPHA:324']
 ```
-This will output the information available about Fabry disease, with Orphanet's ID `ORPHA:324`. In order to query the disease information, please use Orphanet IDs. For further reference, visit [www.orpha.net](www.orpha.net).
+This will output the information available about Fabry disease, with Orphanet's ID `ORPHA:324`. In order to query the disease information, please use Orphanet IDs. For further reference, visit [www.orpha.net](https://www.orpha.net).
 
 The following is an extract of the data returned by the lines above:
 ```python
