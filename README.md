@@ -68,6 +68,48 @@ data = {
 }
 ```
 
+Based on this data, one may subset the diseases in order to get a list of diseases of interest, **highly recommended at the beginning of the development of a phenotypic analysis algorithm:**
+```python
+# These lines come from the previous code
+ann = dann.data
+del phen
+print(f'# total initial entities: {len(ann)}')
+## Keep only disorders
+for dis,val in list(ann.items()):
+    if val['group'] != 'Disorder':
+        del ann[dis]
+print(f'# disases: {len(ann)}')
+## Keep only those with phenotypic information
+for dis,val in list(ann.items()):
+    if not val.get('phenotype'):
+        del ann[dis]
+print(f'# disases with phenotype data: {len(ann)}')
+## Remove clinial syndromes
+for dis,val in list(ann.items()):
+    if val['type'].lower() == 'clinical syndrome':
+        del ann[dis]
+print(f'# diseases w/o clinical syndromes: {len(ann)}')
+## Keep only selected prevalences
+valid_prev = ['>1 / 1000', '6-9 / 10 000', '1-5 / 10 000', '1-9 / 100 000', 'Unknown', 'Not yet documented']
+for dis, val in list(ann.items()):
+    if 'prevalence' in val:
+        classes = [a['class'] for a in val['prevalence'] if a['type'] == 'Point prevalence']
+        if not any(x in valid_prev for x in classes):
+            del ann[dis]
+    else:
+        del ann[dis]
+print(f'# disases with valid prevalence: {len(ann)}')
+```
+
+As a result, the number of entities in the disease annotations object should be reduced as follows:
+```python
+# total initial entities: 6930
+# disases: 5745
+# disases with phenotypes: 3649
+# diseases w/o clinical syndromes: 3628
+# disases with valid prevalence: 1288
+```
+
 ### HPO
 Symptoms are organized through the [Human Phenotype Ontology (HPO)](https://hpo.jax.org/). If you are not familiar with it, please visit the website.
 
