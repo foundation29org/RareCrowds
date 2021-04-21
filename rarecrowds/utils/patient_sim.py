@@ -3,7 +3,7 @@ import numpy as np
 from typing import Dict, List
 import uuid
 
-from rarecrowds.utils.disease_annotations import PhenAnnotations
+from rarecrowds.utils.disease_annotations import DiseaseAnnotations
 from rarecrowds.utils.hpo import Hpo
 
 
@@ -73,7 +73,7 @@ class PatientSampler:
                 "omit_frequency": False,
             },
         }
-        self.phens = PhenAnnotations()
+        self.phens = DiseaseAnnotations()
         self.hpo = Hpo()
         self.__eligibles = build_eligibles(self.phens.data, self.hpo)
 

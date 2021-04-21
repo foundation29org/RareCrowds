@@ -69,8 +69,8 @@ def test_load_from_folder():
     assert phenopacket.diseases[0].term.label == "Achromatopsia"
 
 
-def test_load_default():
+def test_load():
     testDB = PhenotypicDatabase()
-    testDB.load_default("kleyner-2016")
+    testDB.load("kleyner-2016")
     assert os.path.exists("rarecrowds_data/kleyner-2016")
     assert len(glob.glob("rarecrowds_data/kleyner-2016/*.json")) == 1

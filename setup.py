@@ -8,7 +8,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="rarecrowds",
-    version="0.0.2",
+    version="0.0.3",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: POSIX",

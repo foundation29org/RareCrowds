@@ -6,12 +6,42 @@ from azure.storage.blob import BlobServiceClient
 from rarecrowds.conf_utils import get_config_value
 
 ALLOWED_CONTAINERS = {
-    "cipriani-2020": {'cases': 134, 'title': 'An Improved Phenotype-Driven Tool for Rare Mendelian Variant Prioritization: Benchmarking Exomiser on Real Patient Whole-Exome Data', 'year': 2020, 'url': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/'},
-    "ebiki-2019": {'cases': 20, 'title': 'Comparison of Causative Variant Prioritization Tools Using Next-generation Sequencing Data in Japanese Patients with Mendelian Disorders', 'year': 2019, 'url': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/'},
-    "kleyner-2016": {'cases': 1, 'title': 'KBG syndrome involving a single-nucleotide duplication in ANKRD11', 'year': 2016, 'url': 'http://molecularcasestudies.cshlp.org/content/2/6/a001131.long'},
-    "rao-2018": {'cases': 233, 'title': 'Phenotype-driven gene prioritization for rare diseases using graph convolution on heterogeneous networks', 'year': 2018, 'url': 'https://pubmed.ncbi.nlm.nih.gov/29980210/'},
-    "tomar-2019": {'cases': 50, 'title': 'Specific phenotype semantics facilitate gene prioritization in clinical exome sequencing', 'year': 2019, 'url': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/'},
-    "zomojtel-2014": {'cases': 11, 'title': 'Effective diagnosis of genetic disease by computational phenotype analysis of the disease-associated genome', 'year': 2014, 'url': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639/'},
+    "cipriani-2020": {
+        "cases": 134,
+        "title": "An Improved Phenotype-Driven Tool for Rare Mendelian Variant Prioritization: Benchmarking Exomiser on Real Patient Whole-Exome Data",
+        "year": 2020,
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/",
+    },
+    "ebiki-2019": {
+        "cases": 20,
+        "title": "Comparison of Causative Variant Prioritization Tools Using Next-generation Sequencing Data in Japanese Patients with Mendelian Disorders",
+        "year": 2019,
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/",
+    },
+    "kleyner-2016": {
+        "cases": 1,
+        "title": "KBG syndrome involving a single-nucleotide duplication in ANKRD11",
+        "year": 2016,
+        "url": "http://molecularcasestudies.cshlp.org/content/2/6/a001131.long",
+    },
+    "rao-2018": {
+        "cases": 233,
+        "title": "Phenotype-driven gene prioritization for rare diseases using graph convolution on heterogeneous networks",
+        "year": 2018,
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29980210/",
+    },
+    "tomar-2019": {
+        "cases": 50,
+        "title": "Specific phenotype semantics facilitate gene prioritization in clinical exome sequencing",
+        "year": 2019,
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/",
+    },
+    "zomojtel-2014": {
+        "cases": 11,
+        "title": "Effective diagnosis of genetic disease by computational phenotype analysis of the disease-associated genome",
+        "year": 2014,
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639/",
+    },
 }
 
 
