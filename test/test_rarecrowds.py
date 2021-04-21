@@ -16,7 +16,7 @@ def test_add_phenopacket():
 def test_add_hpo_symptoms():
     testDB = PhenotypicDatabase()
     list_of_dicts = [{"phenotypicFeatures": [{"type": {"id": "HP:00675"}}]}]
-    testDB.add_hpo_symptoms(list_of_dicts)
+    testDB._add_hpo_symptoms(list_of_dicts)
     assert list_of_dicts == [
         {
             "phenotypicFeatures": [{"type": {"id": "HP:00675"}}],

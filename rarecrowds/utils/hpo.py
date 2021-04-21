@@ -147,7 +147,7 @@ class Hpo(OntoGraph):
         fig.show()
         return fig
 
-    def plot_patient(self, patient=None, disease=None):
+    def plot(self, patient=None, disease=None):
 
         if not disease:
             return self.plot_disease(patient)
