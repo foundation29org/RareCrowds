@@ -267,6 +267,25 @@ To get a list of dictionaries of the data in the database:
 data = db.generate_list_of_dicts()
 ```
 
+# Interesting publications
+
+## Disease prediction from phenotypes only
+-  Disease Prediction via Graph Neural Networks, **2021**, Sun et al. https://pubmed.ncbi.nlm.nih.gov/32749976/
+-  Graph Neural Network-Based Diagnosis Prediction, **2020**, Li et al. https://pubmed.ncbi.nlm.nih.gov/32783631/
+-  Phrank measures phenotype sets similarity to greatly improve Mendelian diagnostic disease prioritization, **2019**, Jagadeesh et al. https://www.nature.com/articles/s41436-018-0072-y
+-  HPO2Vec+: Leveraging heterogeneous knowledge resources to enrich node embeddings for the Human Phenotype Ontology, **2019**, Shen et al. https://pubmed.ncbi.nlm.nih.gov/31255713/
+-  Phenotype-driven gene prioritization for rare diseases using graph convolution on heterogeneous networks, **2018**, Rao et al. https://pubmed.ncbi.nlm.nih.gov/29980210/
+-  Phenotype-loci associations in networks of patients with rare disorders: application to assist in the diagnosis of novel clinical cases, **2018**, Bueno et al. https://www.nature.com/articles/s41431-018-0139-x?platform=hootsuite
+-  Effective diagnosis of genetic disease by computational phenotype analysis of the disease-associated genome, **2014**, Zemojtel et al. https://pubmed.ncbi.nlm.nih.gov/25186178/
+-  PhenoDigm: analyzing curated annotations to associate animal models with human diseases, **2013**, Smedley et al. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3649640/
+-  Bayesian ontology querying for accurate and noise-tolerant semantic searches, **2012**, Bauer et al. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3463114/
+-  Clinical Diagnostics in Human Genetics with Semantic Similarity Searches in Ontologies, **2009**, Köhler et al. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2756558/
+
+## Disease prediction from phenotypes and genetic data
+-  OligoPVP: Phenotype-driven analysis of individual genomic information to prioritize oligogenic disease variants, **2018**, Boudellioua et al. https://pubmed.ncbi.nlm.nih.gov/30279426/
+-  Phenotype-driven strategies for exome prioritization of human Mendelian disease genes, **2015**, Smedley et al. https://pubmed.ncbi.nlm.nih.gov/26229552/
+-  Effective diagnosis of genetic disease by computational phenotype analysis of the disease-associated genome, **2014**, Zemojtel et al. https://pubmed.ncbi.nlm.nih.gov/25186178/
+
 # References and attributions
 The following references need to be added:
 ## Orphanet
