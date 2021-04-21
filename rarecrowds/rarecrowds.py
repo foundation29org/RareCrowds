@@ -61,7 +61,7 @@ class PhenotypicDatabase:
                 fields.append(field)
         return df[fields]
 
-    def load_default(self, dataset: str, data_path: str = DATA_PATH) -> None:
+    def load(self, dataset: str, data_path: str = DATA_PATH) -> None:
         if not os.path.exists(os.path.join(data_path, dataset)):
             os.makedirs(os.path.join(data_path, dataset))
         try:
