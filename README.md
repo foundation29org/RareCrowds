@@ -176,7 +176,7 @@ hpo.plot(
 
 If two phenotypic profiles are passed as argument, it will plot a comparison:
 ```python
-PhenotypicComparison.plot(
+hpo.plot(
     patient = patients['ORPHA:324']['cohort'][0]['phenotype'],
     disease = { # This entry may also be a list of HPO terms.
         'name': patients['ORPHA:324']['name'],
