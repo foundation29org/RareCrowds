@@ -68,7 +68,7 @@ data = {
 }
 ```
 
-Based on this data, one may subset the diseases in order to get a list of diseases of interest, **highly recommended at the beginning of the development of a phenotypic analysis algorithm:**
+Based on this data, one may subset the diseases in order to get a list of diseases of interest, **highly recommended at the beginning of the development of a phenotype-based prediction algorithm:**
 ```python
 # These lines come from the previous code
 ann = dann.data
@@ -136,6 +136,8 @@ This module allows the creation of realistic patient profiles based on the disea
 1. Sample symptoms using the symptom frequency.
 2. From the selected symptoms, sample imprecision as a Poisson process with a certain probability of getting a less specific term using the HPO ontology.
 3. Add random noise sampling random HPO terms. The amount of random noise is also a Poisson process, while the selection of the HPO terms to include is uniform across the phenotypic abnormality subontology (disregarding too uninformative terms).
+4. Sample patient age by assuming that it is close to the disease onset plus a delay of ~1 month.
+5. Sample patient sex taking into account the inheritance pattern of the disease.
 
 In order to sample 5 patients from a disease, run the following lines:
 ```python
@@ -269,7 +271,10 @@ data = db.generate_list_of_dicts()
 
 # Interesting publications
 
-## Disease prediction from phenotypes only
+## Relevant publications for disease prediction based on phenotypes
+There are many publications exploring the prediction of having a particular rare disease based on a patient's phenotype. The phenotype analysis piece, which may or may not be the central aspect of a publication, largely falls under two categories: ontology- or representation-based algorithms. The ontology-based algorithms define a logic by which distances between terms are calculated based on their position within the ontology and on how common each of them are within the rare diseases (via the information content: *IC = -log(p)*). The representation-based algorithms compute term representation based on embeddings calculated over a specific dataset. Ideally, the dataset should consist of individual (anonymous) patients in order to gather the most granular information. In the abscence of this option it is recommended to simulated such dataset.
+
+### Disease prediction from phenotypes only
 -  Disease Prediction via Graph Neural Networks, **2021**, Sun et al. https://pubmed.ncbi.nlm.nih.gov/32749976/
 -  Graph Neural Network-Based Diagnosis Prediction, **2020**, Li et al. https://pubmed.ncbi.nlm.nih.gov/32783631/
 -  Phrank measures phenotype sets similarity to greatly improve Mendelian diagnostic disease prioritization, **2019**, Jagadeesh et al. https://www.nature.com/articles/s41436-018-0072-y
@@ -281,7 +286,7 @@ data = db.generate_list_of_dicts()
 -  Bayesian ontology querying for accurate and noise-tolerant semantic searches, **2012**, Bauer et al. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3463114/
 -  Clinical Diagnostics in Human Genetics with Semantic Similarity Searches in Ontologies, **2009**, Köhler et al. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2756558/
 
-## Disease prediction from phenotypes and genetic data
+### Disease prediction from phenotypes and genetic data
 -  OligoPVP: Phenotype-driven analysis of individual genomic information to prioritize oligogenic disease variants, **2018**, Boudellioua et al. https://pubmed.ncbi.nlm.nih.gov/30279426/
 -  Phenotype-driven strategies for exome prioritization of human Mendelian disease genes, **2015**, Smedley et al. https://pubmed.ncbi.nlm.nih.gov/26229552/
 -  Effective diagnosis of genetic disease by computational phenotype analysis of the disease-associated genome, **2014**, Zemojtel et al. https://pubmed.ncbi.nlm.nih.gov/25186178/
