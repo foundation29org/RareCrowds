@@ -21,7 +21,7 @@ The PyPI project lives here: https://pypi.org/project/rarecrowds/.
 ## Usage
 
 ### DiseaseAnnotations
-Disease information is extracted from Orphanet's orphadata ([product 4](http://www.orphadata.org/data/xml/en_product4.xml), [product 9 (prevalence)](http://www.orphadata.org/data/xml/en_product9_prev.xml) and [product 9 (ages)](http://www.orphadata.org/data/xml/en_product9_ages.xml)) and from the [HPOA file](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) created by the Monarch Initiative within the HPO project. By default, Orphanet's and OMIM phenotypic description of a rare disease are intersected.
+Disease information is extracted from Orphanet's orphadata ([product 4](http://www.orphadata.org/data/xml/en_product4.xml), [product 9 (prevalence)](http://www.orphadata.org/data/xml/en_product9_prev.xml) and [product 9 (ages)](http://www.orphadata.org/data/xml/en_product9_ages.xml)) and from the [HPOA file](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) created by the Monarch Initiative within the HPO project. By default, Orphanet's and [OMIM](https://www.omim.org/) phenotypic description of a rare disease are intersected.
 
 In order to get information from a particular disease, use the following lines:
 ```python
