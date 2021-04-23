@@ -123,6 +123,7 @@ class PatientSampler:
 
     def sample(
         self,
+        diseases = None,
         patient_params: str = "default",
         N: int = 20,
         dx_criteria_frequency: str = "Very frequent",
@@ -158,7 +159,10 @@ class PatientSampler:
         self.__omit_frequency = self.cases[patient_params]["omit_frequency"]
 
         simulations = {}
-        diseases = self.phens.data
+        if not diseases:
+            diseases = self.phens.data
+        elif type(diseases) == str:
+            diseases = [diseases]
         for d in diseases:
             try:
                 disease = self.phens.data.get(d, {})
