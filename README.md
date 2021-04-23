@@ -207,15 +207,14 @@ Comparing phenotypic profiles is often tricky. Venn diagrams are helpful, but of
 
 If a single phenotypic profile is passed as argument, it will plot the symptoms:
 ```python
-from rarecrowds import Hpo
-hpo = Hpo()
-hpo.plot(patient = patients['ORPHA:324']['cohort'][0]['phenotype'])
+from rarecrowds import PhenotypicComparison
+fig = PhenotypicComparison(patient = patients['ORPHA:324']['cohort'][0]['phenotype'])
 ```
 <img src="https://github.com/foundation29org/RareCrowds/blob/main/resources/profile.png" width="800">
 
 If two phenotypic profiles are passed as argument, it will plot a comparison:
 ```python
-hpo.plot(
+fig = PhenotypicComparison(
     patient = patients['ORPHA:324']['cohort'][0]['phenotype'],
     disease = { # This entry may also be a list of HPO terms.
         'name': patients['ORPHA:324']['name'],
