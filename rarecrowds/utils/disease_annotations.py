@@ -87,7 +87,7 @@ class DiseaseAnnotations:
             #     if i > 1:
             #         break
 
-        return hpoa.data
+        return data
 
     def __getitem__(self, disease: str) -> List[str]:
         """Get disease data."""
