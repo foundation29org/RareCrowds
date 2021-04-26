@@ -21,7 +21,7 @@ The PyPI project lives here: https://pypi.org/project/rarecrowds/.
 ## Usage
 
 ### DiseaseAnnotations
-Disease information is extracted from Orphanet's orphadata ([product 4](http://www.orphadata.org/data/xml/en_product4.xml), [product 9 (prevalence)](http://www.orphadata.org/data/xml/en_product9_prev.xml) and [product 9 (ages)](http://www.orphadata.org/data/xml/en_product9_ages.xml)) and from the [HPOA file](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) created by the Monarch Initiative within the HPO project. By default, Orphanet's and [OMIM](https://www.omim.org/) phenotypic description of a rare disease are intersected.
+Disease information is extracted from Orphanet's orphadata ([product 4](http://www.orphadata.org/data/xml/en_product4.xml), [product 9 (prevalence)](http://www.orphadata.org/data/xml/en_product9_prev.xml) and [product 9 (ages)](http://www.orphadata.org/data/xml/en_product9_ages.xml)) and from the [HPOA file](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) created by the Monarch Initiative within the HPO project. By default, Orphanet's and [OMIM](https://www.omim.org/) phenotypic description of a rare disease extracted from the HPOA file are intersected. There is, in principle, no need for you to parse the data provided from these institutions.
 
 In order to get information from a particular disease, use the following lines:
 ```python
@@ -113,7 +113,7 @@ As a result, the number of entities in the disease annotations object should be 
 ### HPO
 Symptoms are organized through the [Human Phenotype Ontology (HPO)](https://hpo.jax.org/). If you are not familiar with it, please visit the website.
 
-In order to get information on specific symptom IDs and other items included in the HPO ontology, such as the frequency subontology, RareCrowds includes the HPO module.
+In order to get information on specific symptom IDs and other items included in the HPO ontology, such as the frequency subontology, RareCrowds includes the HPO module. This module allows you to get information about each term and their relationships.
 
 In order to get information about a specific HPO term, run the following lines:
 ```python
@@ -129,6 +129,17 @@ hpo.predecessors(['HP:0001250'])
 In order to simplify a phenotypic profile, leaving only most informative, yet independent, terms run the following lines:
 ```python
 hpo.simplify(['HP:0001250', 'HP:0007359'])
+```
+
+Available methods (apologies for the lack of documentation):
+```
+hpo.items(): returns all items in HPO. Keep in mind that not all items are phenotypic abnormalities. If you want all symptoms, call for ALL the successors of HP:0000118.
+hpo.save_json(filename): saves the ontology as json.
+hpo.json(): returns a json object of th eontology.
+hpo.json_adjacency(): Dumps the adjacency matrix as json.
+hpo.successors(ids, depth=1): Returns list of successors. If depth = 0 it returns immediate successors.
+hpo.predecessors(ids, depth=1): Returns list of predecessors. If depth = 0 it returns immediate predecessors.
+hpo.simplify(ids): Simplifies a phenotypic profile, leaving only most informative terms.
 ```
 
 ### PatientSampler
