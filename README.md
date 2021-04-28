@@ -12,6 +12,8 @@ The 5 modules are covered in the [Usage section](#usage) below.
 
 This package is in early development, so do not expect to see extense docstrings and sphinx documentation. At this point, this README is your best resource. Any doubt, please create an Issue and we'll give you an answer ASAP.
 
+If you are not a Python programmer, but you are interested in analyzing these data and maybe try to create a disease prediction algorithm, you will find the data in the resources directory. You have all [the nodes of the HPO ontology](https://github.com/foundation29org/RareCrowds/blob/main/resources/hpo_nodes.tsv), [the edges between them](https://github.com/foundation29org/RareCrowds/blob/main/resources/hpo_pairs.tsv) and a [json with the disease information](https://github.com/foundation29org/RareCrowds/blob/main/resources/disease_data.json).
+
 ## Installation
 To install it simply run:
 `pip install rarecrowds`
