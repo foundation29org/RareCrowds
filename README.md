@@ -233,11 +233,12 @@ Finally, you may use the PhenotypicDatabase module to pull data from public sour
 | [Stelzer, 2016](https://dx.doi.org/10.1186/s12864-016-2722-2) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 2 |
 | [Lee, 2016](https://dx.doi.org/10.1001/jama.2014.14604) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 200 |
 | [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long) | Yes | [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long) | 1 |
-| [Zemojtel, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639) | No | [Supp.](https://stm.sciencemag.org/content/scitransmed/suppl/2014/08/29/6.252.252ra123.DC1/6-252ra123_SM.pdf) | 11 |
-| [Cipriani, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/) | No | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/bin/genes-11-00460-s001.pdf) | 134 |
-| [Tomar, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/) | No | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/bin/41431_2019_412_MOESM2_ESM.docx) | 50 |
+| [Zemojtel, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639) | Added disease ID | [Supp.](https://stm.sciencemag.org/content/scitransmed/suppl/2014/08/29/6.252.252ra123.DC1/6-252ra123_SM.pdf) | 11 |
+| [Cipriani, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/) | Added disease ID | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/bin/genes-11-00460-s001.pdf) | 134 |
+| [Tomar, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/) | Added disease ID | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777628/bin/41431_2019_412_MOESM2_ESM.docx) | 50 |
 | [Ebiki, 2019](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/) | No | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6739250/bin/yam-62-244-s002.pdf) | 20 |
 | [ClinVar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz) | Subsampled | [ClinVar](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz) | 68153 |
+| [Robinson (Multiple publications)](https://zenodo.org/record/3905420#.YR1Ufd-xWUk) | No | [Robinson](https://zenodo.org/record/3905420#.YR1Ufd-xWUk) | 384 | Single variants |
 
 Any publication or algorithm stemming from data from the sources above **MUST** cite the source properly. It is the onus of the publisher to comply with this.
 

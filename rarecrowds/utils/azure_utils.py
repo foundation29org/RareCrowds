@@ -42,6 +42,12 @@ ALLOWED_CONTAINERS = {
         "year": 2014,
         "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639/",
     },
+    "robinson-2020": {
+        "cases": 384,
+        "title": "384 Phenopackets (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3905420",
+        "year": 2020,
+        "url": "https://zenodo.org/record/3905420#.YR5std-xWUl",
+    },
 }
 
 
