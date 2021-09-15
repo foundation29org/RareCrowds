@@ -283,6 +283,7 @@ data = db.generate_list_of_dicts()
 There are many publications exploring the prediction of having a particular rare disease based on a patient's phenotype. The phenotype analysis piece, which may or may not be the central aspect of a publication, largely falls under two categories: ontology- or representation-based algorithms. The ontology-based algorithms define a logic by which distances between terms are calculated based on their position within the ontology and on how common each of them are within the rare diseases (via the information content: *IC = -log(p)*). The representation-based algorithms compute term representation based on embeddings calculated over a specific dataset. Ideally, the dataset should consist of individual (anonymous) patients in order to gather the most granular information. In the abscence of this option it is recommended to simulated such dataset.
 
 ### Disease prediction from phenotypes only
+-  CADA: phenotype-driven gene prioritization based on a case-enriched knowledge graph, **2021**, Peng et al. https://academic.oup.com/nargab/article/3/3/lqab078/6363753
 -  Disease Prediction via Graph Neural Networks, **2021**, Sun et al. https://pubmed.ncbi.nlm.nih.gov/32749976/
 -  Graph Neural Network-Based Diagnosis Prediction, **2020**, Li et al. https://pubmed.ncbi.nlm.nih.gov/32783631/
 -  Phrank measures phenotype sets similarity to greatly improve Mendelian diagnostic disease prioritization, **2019**, Jagadeesh et al. https://www.nature.com/articles/s41436-018-0072-y
