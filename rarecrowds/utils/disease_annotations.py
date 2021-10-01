@@ -14,7 +14,7 @@ class DiseaseAnnotations:
 
     def __init__(
         self,
-        mode="intersect",
+        mode="orpha",
         reload_orpha=False,
         reload_mondo=False,
         reload_hpoa=False,

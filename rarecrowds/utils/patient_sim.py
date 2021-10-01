@@ -47,7 +47,7 @@ class PatientSampler:
             "excluded": {"id": "HP:0040285", "interval": [0, 0]},
         }
         self.cases = {
-            "default": {
+            "noise": {
                 "imprecision": 1,
                 "noise": 0.25,
                 "omit_frequency": False,
@@ -124,7 +124,7 @@ class PatientSampler:
     def sample(
         self,
         diseases = None,
-        patient_params: str = "default",
+        patient_params: str = "impre",
         N: int = 20,
         dx_criteria_frequency: str = "Very frequent",
         default_frequency: List = ["HP:0040282", "HP:0040283"],
@@ -134,6 +134,12 @@ class PatientSampler:
 
         Dx criteria and default frequency configures what to do when frequency is unknown.
         Noise ratio represents the maximum number of HP terms that are included as noise.
+        :param diseases: List of disease IDs to simulate patients from, dictionary with disease IDs as keys and symptom information or None. If None, all disease from Orphanet and HPOA are used to sample patients from. If a dictionary, it should have the following key-value structure (only key-phenoytpe is strictly needed): 'ORPHA:11': {'name': 'disease name', 'ageOnset': 'HP:XXXXX', 'phenotype': {'HP:0001249': {'frequency': 'HP:0040281', 'modifier': {'diagnosticCriteria': True}}}}.
+        :type diseases: list, str, dict 
+        :param patient_params: Simulation mode: noise, impre, impre2, freqs, ideal.
+        :type patient_params: str
+        :param N: Numbre of patients to simulate per disease.
+        :type N: int
         :param dx_criteria_frequency: Frequency to use with symptoms used as diagnostic criteria if frequency is unknown.
         :type dx_criteria_frequency: str
         :param default_frequency: Frequency to use when symptom frequency is unknown. If a list is passed, it will be sampled each time.
@@ -163,9 +169,10 @@ class PatientSampler:
             diseases = self.phens.data
         elif type(diseases) == str:
             diseases = [diseases]
+
         for d in diseases:
             try:
-                disease = self.phens.data.get(d, {})
+                disease = diseases.get(d, {})
                 if not disease:
                     simulations[d] = {}
                     continue

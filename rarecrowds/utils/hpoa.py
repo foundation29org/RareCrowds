@@ -10,7 +10,7 @@ class Hpoa:
     def __init__(self, reload: bool = False):
         """
         Load disease annodation data.
-        If filepath is not provided, load pickle data.
+        If reload is False, load pickle data.
         Alternatively, load HPOA data file (tsv).
         """
         self._data_path = os.path.join(os.path.dirname(__file__), "resources")
