@@ -73,9 +73,9 @@ class PatientSampler:
                 "omit_frequency": False,
             },
         }
-        self.phens = DiseaseAnnotations()
+        self.diseases = DiseaseAnnotations()
         self.hpo = Hpo()
-        self.__eligibles = build_eligibles(self.phens.data, self.hpo)
+        self.__eligibles = build_eligibles(self.diseases.data, self.hpo)
 
     def convert_simulations_to_phenopackets(
         self, simulations: Dict, num_patients: int = 20
@@ -166,13 +166,15 @@ class PatientSampler:
 
         simulations = {}
         if not diseases:
-            diseases = self.phens.data
+            diseases = self.diseases.data
         elif type(diseases) == str:
             diseases = [diseases]
+        
+        if type(diseases) == list:
+            diseases = {d: self.diseases.data.get(d, {}) for d in diseases}
 
-        for d in diseases:
+        for d,disease in diseases.items():
             try:
-                disease = diseases.get(d, {})
                 if not disease:
                     simulations[d] = {}
                     continue
