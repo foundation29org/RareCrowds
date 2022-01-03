@@ -244,7 +244,7 @@ Finally, you may use the PhenotypicDatabase module to pull data from public sour
 | [Stavropoulos, 2016](https://dx.doi.org/10.1038/npjgenmed.2015.12) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 28 |
 | [Bone, 2016](https://dx.doi.org/10.1038/gim.2015.137) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 3 |
 | [Stelzer, 2016](https://dx.doi.org/10.1186/s12864-016-2722-2) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 2 |
-| [Lee, 2016](https://dx.doi.org/10.1001/jama.2014.14604) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 200 |
+| [Lee, 2014](https://dx.doi.org/10.1001/jama.2014.14604) | No | [Rao, 2018](https://pubmed.ncbi.nlm.nih.gov/29980210/) | 200 |
 | [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long) | Yes | [Kleyner, 2016](http://molecularcasestudies.cshlp.org/content/2/6/a001131.long) | 1 |
 | [Zemojtel, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4512639) | Added disease ID | [Supp.](https://stm.sciencemag.org/content/scitransmed/suppl/2014/08/29/6.252.252ra123.DC1/6-252ra123_SM.pdf) | 11 |
 | [Cipriani, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/) | Added disease ID | [Supp.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230372/bin/genes-11-00460-s001.pdf) | 134 |
